@@ -22,6 +22,10 @@ const page = async () => {
                 <td>Segment</td>
                 <td>Compact</td>
               </tr>
+              <tr>
+                <td>Doors:</td>
+                <td>3,4,5</td>
+              </tr>
               <tr className="">
                 <td className="w-1/2">Engine type</td>
                 <td>Turbo charged with VTEC</td>
