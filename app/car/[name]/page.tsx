@@ -12,7 +12,7 @@ const page = async () => {
       img
       <h1 className="capitalize">{name}</h1>
       <h2>Gen. 1</h2>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-4">
         <div className="bg-white py-4 px-8 shadow-sm">
           <table>
             <tbody>
@@ -43,13 +43,25 @@ const page = async () => {
             </tbody>
           </table>
           <div>
-            <h4>Acceleration and stuff:</h4>
-            <p>0-100 km/h - 5,4 s</p>
-            <p>
-              v-max: 2 minuty 23 sekundy: Type R to najszybszy samochód z
-              napędem na przednie koła, jaki kiedykolwiek pokonał jedno 5,8
-              kilometrowe okrążenie na legendarnym torze Suzuka.
-            </p>
+            <h4>Performance</h4>
+            <table>
+              <tr>
+                <td>Mileage</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>0 - 100 km/h</td>
+                <td>5,4 s</td>
+              </tr>
+              <tr>
+                <td>V-max</td>
+                <td>
+                  2 minuty 23 sekundy: Type R to najszybszy samochód z napędem
+                  na przednie koła, jaki kiedykolwiek pokonał jedno 5,8
+                  kilometrowe okrążenie na legendarnym torze Suzuka.
+                </td>
+              </tr>
+            </table>
           </div>
           <div>
             <h4>Transmission:</h4>
@@ -64,7 +76,9 @@ const page = async () => {
             <p>5 drzwi</p>
           </div>
         </div>
-        <div></div>
+        <div className="bg-white py-4 px-8 shadow-sm">
+          <h2>Competition</h2>
+        </div>
       </div>
     </div>
   );
