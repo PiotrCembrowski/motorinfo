@@ -45,22 +45,24 @@ const page = async () => {
           <div>
             <h4>Performance</h4>
             <table>
-              <tr>
-                <td>Mileage</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>0 - 100 km/h</td>
-                <td>5,4 s</td>
-              </tr>
-              <tr>
-                <td>V-max</td>
-                <td>
-                  2 minuty 23 sekundy: Type R to najszybszy samochód z napędem
-                  na przednie koła, jaki kiedykolwiek pokonał jedno 5,8
-                  kilometrowe okrążenie na legendarnym torze Suzuka.
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Mileage</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>0 - 100 km/h</td>
+                  <td>5,4 s</td>
+                </tr>
+                <tr>
+                  <td>V-max</td>
+                  <td>
+                    2 minuty 23 sekundy: Type R to najszybszy samochód z napędem
+                    na przednie koła, jaki kiedykolwiek pokonał jedno 5,8
+                    kilometrowe okrążenie na legendarnym torze Suzuka.
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div>
