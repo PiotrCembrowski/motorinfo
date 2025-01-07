@@ -18,6 +18,10 @@ const page = async () => {
         <div className="bg-white py-4 px-8 shadow-sm">
           <table>
             <tbody>
+              <tr>
+                <td>Segment</td>
+                <td>Compact</td>
+              </tr>
               <tr className="">
                 <td className="w-1/2">Engine type</td>
                 <td>Turbo charged with VTEC</td>
