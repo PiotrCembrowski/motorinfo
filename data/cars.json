@@ -1,0 +1,20 @@
+{
+  "name": "Honda",
+  "gen": 1,
+  "segment": "compact",
+  "door": "3-5",
+  "Engine": "Turbo charged with VTec",
+  "Displacment": 2000,
+  "Power": 329,
+  "Cylinders": 4,
+  "Turbo": "Yes",
+  "Torque": 420,
+  "Mileage": 10,
+  "Acceleration": 5.4,
+  "V-max": 200,
+  "Transmission": 6,
+  "Transmission-type": "manual",
+  "height": 880,
+  "width": 140,
+  "length": 2000
+}
