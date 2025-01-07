@@ -1,6 +1,7 @@
 import React from "react";
 import { headers } from "next/headers";
 import Competition from "@/app/components/car/Competition";
+import CompanyVehicles from "@/app/components/car/CompanyVehicles";
 
 const page = async () => {
   const headerList = await headers();
@@ -79,10 +80,12 @@ const page = async () => {
             <p>5 drzwi</p>
           </div>
         </div>
-        <div className="bg-white py-4 px-8 shadow-sm">
-          <h2>Competition</h2>
-          <div>
+        <div className="grid grid-cols-1 gap-4">
+          <div className="bg-white py-4 px-8 shadow-sm">
             <Competition />
+          </div>
+          <div className="bg-white py-4 px-8 shadow-sm">
+            <CompanyVehicles />
           </div>
         </div>
       </div>

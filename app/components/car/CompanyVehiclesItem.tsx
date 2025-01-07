@@ -1,6 +1,6 @@
 import React from "react";
 
-const CompetitionItem = () => {
+const CompanyVehiclesItem = () => {
   return (
     <div>
       <table>
@@ -15,4 +15,4 @@ const CompetitionItem = () => {
   );
 };
 
-export default CompetitionItem;
+export default CompanyVehiclesItem;
