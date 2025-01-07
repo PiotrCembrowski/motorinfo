@@ -8,7 +8,7 @@ const page = async () => {
   const name = url?.replace(/%20/g, " ");
 
   return (
-    <div>
+    <div className="w-[1440px] m-auto mt-11">
       <h1>{name}</h1>
     </div>
   );
