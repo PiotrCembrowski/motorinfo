@@ -1,5 +1,6 @@
 {
-  "name": "Honda",
+  "brand": "Honda",
+  "name": "Civic",
   "gen": 1,
   "segment": "compact",
   "door": "3-5",

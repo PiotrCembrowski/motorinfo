@@ -2,6 +2,8 @@ import React from "react";
 import { headers } from "next/headers";
 import Competition from "@/app/components/car/Competition";
 import CompanyVehicles from "@/app/components/car/CompanyVehicles";
+import Image from "next/image";
+import Link from "next/link";
 
 const page = async () => {
   const headerList = await headers();
@@ -10,11 +12,27 @@ const page = async () => {
   const name = url?.replace(/%20/g, " ");
 
   return (
-    <div className="w-[1440px] m-auto mt-11">
-      img
-      <h1 className="capitalize">{name}</h1>
-      <h2>Gen. 1</h2>
-      <div className="grid grid-cols-2 gap-4">
+    <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
+      <Link href={`/ford`}>Back to {name} models</Link>
+      <div>
+        <h1 className="capitalize">{name}</h1>
+        <h2>Gen. 1</h2>
+        <Image
+          src="/../../../public/images/honda.jpg"
+          alt="car"
+          width={500}
+          height={200}
+        />
+        <div className="grid grid-cols-1 gap-4 mt-4">
+          <div className="bg-white py-4 px-8 shadow-sm">
+            <Competition />
+          </div>
+          <div className="bg-white py-4 px-8 shadow-sm">
+            <CompanyVehicles />
+          </div>
+        </div>
+      </div>
+      <div>
         <div className="bg-white py-4 px-8 shadow-sm">
           <table>
             <tbody>
@@ -53,11 +71,11 @@ const page = async () => {
             </tbody>
           </table>
           <div>
-            <h4>Performance</h4>
+            <h4 className="mt-4">Performance</h4>
             <table>
               <tbody>
                 <tr>
-                  <td>Mileage</td>
+                  <td className="w-1/3">Mileage</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -65,7 +83,7 @@ const page = async () => {
                   <td>5,4 s</td>
                 </tr>
                 <tr>
-                  <td>V-max</td>
+                  <td className="align-top">V-max</td>
                   <td>
                     2 minuty 23 sekundy: Type R to najszybszy samochód z napędem
                     na przednie koła, jaki kiedykolwiek pokonał jedno 5,8
@@ -76,24 +94,16 @@ const page = async () => {
             </table>
           </div>
           <div>
-            <h4>Transmission:</h4>
+            <h4 className="mt-4">Transmission:</h4>
             <p>6-gears</p>
             <p>manual</p>
           </div>
           <div>
-            <h4>Measurements: </h4>
+            <h4 className="mt-4">Measurements: </h4>
             <p>wysokość</p>
             <p>szerokość</p>
             <p>długość</p>
             <p>5 drzwi</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 gap-4">
-          <div className="bg-white py-4 px-8 shadow-sm">
-            <Competition />
-          </div>
-          <div className="bg-white py-4 px-8 shadow-sm">
-            <CompanyVehicles />
           </div>
         </div>
       </div>
