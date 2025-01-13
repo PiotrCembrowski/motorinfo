@@ -1,6 +1,7 @@
 import React from "react";
 import { headers } from "next/headers";
 import { promises as fs } from "fs";
+import Link from "next/link";
 
 const page = async () => {
   const headerList = await headers();
@@ -15,7 +16,7 @@ const page = async () => {
   return (
     <div>
       <h1>{name}</h1>
-      <p>{data.name}</p>
+      <Link href={`honda/${data.name}`}>{data.name}</Link>
     </div>
   );
 };
