@@ -13,8 +13,8 @@ const page = async () => {
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
-      <Link href={`/ford`}>Back to {name} models</Link>
       <div>
+        <Link href="/honda">Honda vehicles</Link>
         <h1 className="capitalize">{name}</h1>
         <h2>Gen. 1</h2>
         <Image
