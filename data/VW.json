@@ -1,0 +1,156 @@
+[
+  {
+    "model": "Volkswagen Golf",
+    "segment": "Kompaktowy",
+    "door_options": [3, 5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.0 TSI", "1.5 TSI", "2.0 TSI"],
+        "moc": "110–245 KM",
+        "moment_obrotowy": "200–370 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI"],
+        "moc": "115–200 KM",
+        "moment_obrotowy": "300–400 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["1.4 eHybrid"],
+        "moc": "204–245 KM",
+        "moment_obrotowy": "350–400 Nm"
+      }
+    },
+    "charakterystyka": "Kompaktowy hatchback łączący nowoczesne technologie z dynamiczną jazdą.",
+    "specyfikacja": {
+      "mileage": "4.0–6.5 l/100 km",
+      "acceleration": "6.2–8.5 s (0–100 km/h)",
+      "v_max": "210–250 km/h",
+      "gears": "6–7",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1491 mm",
+      "weight": "1265–1555 kg",
+      "length": "4284 mm"
+    }
+  },
+  {
+    "model": "Volkswagen Passat",
+    "segment": "Klasa średnia",
+    "door_options": [4, 5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.5 TSI", "2.0 TSI"],
+        "moc": "150–272 KM",
+        "moment_obrotowy": "250–350 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI"],
+        "moc": "150–240 KM",
+        "moment_obrotowy": "340–500 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["1.4 TSI eHybrid"],
+        "moc": "218 KM",
+        "moment_obrotowy": "400 Nm"
+      }
+    },
+    "charakterystyka": "Elegancki sedan lub kombi oferujący przestronność i komfort na długie podróże.",
+    "specyfikacja": {
+      "mileage": "4.1–7.0 l/100 km",
+      "acceleration": "5.6–8.7 s (0–100 km/h)",
+      "v_max": "220–250 km/h",
+      "gears": "6–7",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1456 mm",
+      "weight": "1420–1700 kg",
+      "length": "4775 mm"
+    }
+  },
+  {
+    "model": "Volkswagen Tiguan",
+    "segment": "SUV",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.5 TSI", "2.0 TSI"],
+        "moc": "130–245 KM",
+        "moment_obrotowy": "220–370 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI"],
+        "moc": "150–200 KM",
+        "moment_obrotowy": "340–400 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["1.4 TSI eHybrid"],
+        "moc": "245 KM",
+        "moment_obrotowy": "400 Nm"
+      }
+    },
+    "charakterystyka": "Wszechstronny SUV łączący funkcjonalność z nowoczesnym designem.",
+    "specyfikacja": {
+      "mileage": "4.5–7.5 l/100 km",
+      "acceleration": "6.1–9.3 s (0–100 km/h)",
+      "v_max": "200–250 km/h",
+      "gears": "6–7",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1675 mm",
+      "weight": "1500–1800 kg",
+      "length": "4509 mm"
+    }
+  },
+  {
+    "model": "Volkswagen ID.4",
+    "segment": "SUV elektryczny",
+    "door_options": [5],
+    "silniki": {
+      "elektryczne": {
+        "typy": ["silnik elektryczny"],
+        "moc": "148–204 KM",
+        "moment_obrotowy": "220–310 Nm"
+      }
+    },
+    "charakterystyka": "Nowoczesny, w pełni elektryczny SUV oferujący przestronność i zasięg do 520 km.",
+    "specyfikacja": {
+      "mileage": "14.5–17.5 kWh/100 km",
+      "acceleration": "8.5–10.2 s (0–100 km/h)",
+      "v_max": "160 km/h",
+      "gears": "1",
+      "transmission_type": "automatyczna",
+      "height": "1640 mm",
+      "weight": "1900–2200 kg",
+      "length": "4584 mm"
+    }
+  },
+  {
+    "model": "Volkswagen Arteon",
+    "segment": "Klasa wyższa",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["2.0 TSI"],
+        "moc": "190–320 KM",
+        "moment_obrotowy": "320–450 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI"],
+        "moc": "150–240 KM",
+        "moment_obrotowy": "340–500 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["1.4 TSI eHybrid"],
+        "moc": "218 KM",
+        "moment_obrotowy": "400 Nm"
+      }
+    },
+    "charakterystyka": "Stylowy fastback łączący elegancję z dynamicznymi osiągami.",
+    "specyfikacja": {
+      "mileage": "4.2–7.9 l/100 km",
+      "acceleration": "5.0–7.8 s (0–100 km/h)",
+      "v_max": "210–250 km/h",
+      "gears": "7",
+      "transmission_type": "automatyczna",
+      "height": "1442 mm",
+      "weight": "1600–1800 kg"
+    }
+  }
+]
