@@ -1,0 +1,155 @@
+[
+  {
+    "model": "Audi A3",
+    "segment": "Kompaktowy",
+    "door_options": [3, 5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.0 TFSI", "1.5 TFSI", "2.0 TFSI"],
+        "moc": "110–190 KM",
+        "moment_obrotowy": "200–320 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI"],
+        "moc": "116–150 KM",
+        "moment_obrotowy": "300–360 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["1.4 TFSI e"],
+        "moc": "204–245 KM",
+        "moment_obrotowy": "350–400 Nm"
+      }
+    },
+    "charakterystyka": "Kompaktowy hatchback oferujący nowoczesne technologie i dynamiczną jazdę.",
+    "specyfikacja": {
+      "mileage": "4.0–6.5 l/100 km",
+      "acceleration": "6.8–8.4 s (0–100 km/h)",
+      "v_max": "210–240 km/h",
+      "gears": "6–7",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1425 mm",
+      "weight": "1240–1500 kg",
+      "length": "4343 mm"
+    }
+  },
+  {
+    "model": "Audi Q5",
+    "segment": "SUV",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["2.0 TFSI"],
+        "moc": "204–265 KM",
+        "moment_obrotowy": "320–370 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI", "3.0 TDI"],
+        "moc": "163–286 KM",
+        "moment_obrotowy": "380–620 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["2.0 TFSI e"],
+        "moc": "299–367 KM",
+        "moment_obrotowy": "450–500 Nm"
+      }
+    },
+    "charakterystyka": "Luksusowy SUV łączący komfort, przestronność i zaawansowane technologie.",
+    "specyfikacja": {
+      "mileage": "5.4–8.5 l/100 km",
+      "acceleration": "5.1–8.1 s (0–100 km/h)",
+      "v_max": "220–240 km/h",
+      "gears": "7–8",
+      "transmission_type": "automatyczna",
+      "height": "1659 mm",
+      "weight": "1770–2020 kg",
+      "length": "4682 mm"
+    }
+  },
+  {
+    "model": "Audi e-tron GT",
+    "segment": "Sportowy elektryczny",
+    "door_options": [4],
+    "silniki": {
+      "elektryczne": {
+        "typy": ["Podwójny silnik elektryczny"],
+        "moc": "476–598 KM",
+        "moment_obrotowy": "630–830 Nm"
+      }
+    },
+    "charakterystyka": "Wysokowydajny elektryczny samochód sportowy z zaawansowaną aerodynamiką.",
+    "specyfikacja": {
+      "mileage": "do 488 km (WLTP)",
+      "acceleration": "3.3–4.1 s (0–100 km/h)",
+      "v_max": "245–250 km/h",
+      "gears": "2",
+      "transmission_type": "elektryczna",
+      "height": "1410 mm",
+      "weight": "2295 kg",
+      "length": "4989 mm"
+    }
+  },
+  {
+    "model": "Audi A6",
+    "segment": "Klasa wyższa",
+    "door_options": [4, 5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["2.0 TFSI", "3.0 TFSI"],
+        "moc": "204–340 KM",
+        "moment_obrotowy": "320–500 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI", "3.0 TDI"],
+        "moc": "163–286 KM",
+        "moment_obrotowy": "370–620 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["2.0 TFSI e"],
+        "moc": "299–367 KM",
+        "moment_obrotowy": "450–500 Nm"
+      }
+    },
+    "charakterystyka": "Elegancka limuzyna oferująca luksus, przestronność i innowacyjne technologie.",
+    "specyfikacja": {
+      "mileage": "4.4–8.2 l/100 km",
+      "acceleration": "5.1–8.3 s (0–100 km/h)",
+      "v_max": "250 km/h",
+      "gears": "7–8",
+      "transmission_type": "automatyczna",
+      "height": "1457 mm",
+      "weight": "1680–1995 kg",
+      "length": "4939 mm"
+    }
+  },
+  {
+    "model": "Audi Q7",
+    "segment": "SUV",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["3.0 TFSI"],
+        "moc": "340 KM",
+        "moment_obrotowy": "500 Nm"
+      },
+      "diesle": {
+        "typy": ["3.0 TDI"],
+        "moc": "231–286 KM",
+        "moment_obrotowy": "500–600 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["3.0 TFSI e"],
+        "moc": "381–462 KM",
+        "moment_obrotowy": "600–700 Nm"
+      }
+    },
+    "charakterystyka": "Duży SUV premium oferujący przestronność, komfort i zaawansowane systemy wspomagające.",
+    "specyfikacja": {
+      "mileage": "6.6–9.1 l/100 km",
+      "acceleration": "5.7–7.1 s (0–100 km/h)",
+      "v_max": "241–250 km/h",
+      "gears": "8",
+      "transmission_type": "automatyczna",
+      "height": "1741 mm"
+    }
+  }
+]
