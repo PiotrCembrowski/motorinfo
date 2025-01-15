@@ -11,7 +11,6 @@ const page = async () => {
 
   const car = await fs.readFile(process.cwd() + "/data/cars.json", "utf-8");
   const data = JSON.parse(car);
-  console.log(data);
 
   return (
     <div>
