@@ -5,7 +5,7 @@ import Image from "next/image";
 const BrandItem = ({ brand }) => {
   console.log(brand.img_url);
   return (
-    <Link href="Honda">
+    <Link href={brand.brand}>
       <div className="text-center">
         <Image src={brand.img_url} alt={brand.brand} width={250} height={250} />
       </div>

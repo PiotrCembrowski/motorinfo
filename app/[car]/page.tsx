@@ -9,7 +9,7 @@ const page = async () => {
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
 
-  const car = await fs.readFile(process.cwd() + "/data/Honda.json", "utf-8");
+  const car = await fs.readFile(process.cwd() + `/data/${name}.json`, "utf-8");
   const data = JSON.parse(car);
 
   return (
@@ -17,7 +17,7 @@ const page = async () => {
       <h1>{name}</h1>
       {data.map((car, index: number) => {
         return (
-          <Link href={`honda/${car.model}`} key={index}>
+          <Link href={`${name}/${car.model}`} key={index}>
             {car.model}
           </Link>
         );
