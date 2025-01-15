@@ -1,14 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import img from "@/public/images/honda-logo.png";
 
-const BrandItem = () => {
+const BrandItem = ({ brand }) => {
+  console.log(brand.img_url);
   return (
     <Link href="Honda">
       <div className="text-center">
-        <Image src={img} alt="Honda" />
-        <h3>Honda</h3>
+        <Image src={brand.img_url} alt={brand.brand} width={250} height={250} />
       </div>
     </Link>
   );

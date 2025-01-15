@@ -1,6 +1,10 @@
 [
   {
     "brand": "honda",
-    "img_url": "@/public/images/honda-logo.png"
+    "img_url": "/images/honda-logo.png"
+  },
+  {
+    "brand": "bmw",
+    "img_url": "/images/bmw-logo.png"
   }
 ]
