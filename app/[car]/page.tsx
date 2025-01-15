@@ -11,12 +11,11 @@ const page = async () => {
 
   const car = await fs.readFile(process.cwd() + "/data/Honda.json", "utf-8");
   const data = JSON.parse(car);
-  console.log(data);
 
   return (
     <div>
       <h1>{name}</h1>
-      {data.map((car, index) => {
+      {data.map((car, index: number) => {
         return (
           <Link href={`honda/${car.model}`} key={index}>
             {car.model}
