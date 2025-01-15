@@ -1,167 +1,122 @@
 [
   {
-    "model": "CR-V e:HEV",
-    "segment": "SUV",
-    "door_options": [5],
+    "model": "Honda Civic",
+    "segment": "Kompaktowy",
+    "door_options": [4, 5],
     "silniki": {
-      "benzynowe": null,
-      "diesle": null,
+      "benzynowe": {
+        "typy": ["1.5 VTEC Turbo"],
+        "moc": "182 KM",
+        "moment_obrotowy": "240 Nm"
+      },
       "hybrydowe": {
-        "typy": ["2.0L i-MMD"],
+        "typy": ["2.0 e:HEV Hybrid"],
         "moc": "184 KM",
         "moment_obrotowy": "315 Nm"
       }
     },
-    "charakterystyka": "Flagowy SUV premium Hondy z nowoczesnymi technologiami i przestronnym wnętrzem.",
+    "charakterystyka": "Nowoczesny kompaktowy hatchback lub sedan, oferujący dynamiczne osiągi i ekonomiczne silniki.",
     "specyfikacja": {
-      "mileage": "5.7 l/100 km",
+      "mileage": "4.2–6.5 l/100 km",
+      "acceleration": "7.9–8.1 s (0–100 km/h)",
+      "v_max": "200–220 km/h",
+      "gears": 6,
+      "transmission_type": "manualna/automatyczna",
+      "height": "1414 mm",
+      "weight": "1375–1500 kg",
+      "length": "4674 mm"
+    }
+  },
+  {
+    "model": "Honda Accord",
+    "segment": "Klasa średnia",
+    "door_options": [4],
+    "silniki": {
+      "hybrydowe": {
+        "typy": ["2.0 e:HEV Hybrid"],
+        "moc": "215 KM",
+        "moment_obrotowy": "315 Nm"
+      }
+    },
+    "charakterystyka": "Stylowy sedan średniej klasy z hybrydowym napędem o doskonałej ekonomii paliwowej.",
+    "specyfikacja": {
+      "mileage": "4.4–5.0 l/100 km",
+      "acceleration": "7.2 s (0–100 km/h)",
+      "v_max": "210 km/h",
+      "gears": "brak (e-CVT)",
+      "transmission_type": "automatyczna",
+      "height": "1450 mm",
+      "weight": "1560–1600 kg",
+      "length": "4884 mm"
+    }
+  },
+  {
+    "model": "Honda CR-V",
+    "segment": "SUV",
+    "door_options": [5],
+    "silniki": {
+      "hybrydowe": {
+        "typy": ["2.0 e:HEV Hybrid"],
+        "moc": "184 KM",
+        "moment_obrotowy": "315 Nm"
+      }
+    },
+    "charakterystyka": "Popularny SUV z przestronnym wnętrzem i wydajnym napędem hybrydowym.",
+    "specyfikacja": {
+      "mileage": "5.0–5.3 l/100 km",
       "acceleration": "8.6 s (0–100 km/h)",
       "v_max": "180 km/h",
       "gears": "brak (e-CVT)",
-      "transmission_type": "hybrydowa",
+      "transmission_type": "automatyczna",
       "height": "1689 mm",
-      "weight": "1667 kg",
+      "weight": "1610–1700 kg",
       "length": "4600 mm"
     }
   },
   {
-    "model": "ZR-V e:HEV",
-    "segment": "SUV",
+    "model": "Honda HR-V",
+    "segment": "Crossover",
     "door_options": [5],
     "silniki": {
-      "benzynowe": null,
-      "diesle": null,
       "hybrydowe": {
-        "typy": ["2.0L e:HEV"],
-        "moc": "184 KM",
-        "moment_obrotowy": "315 Nm"
-      }
-    },
-    "charakterystyka": "Sportowy, hybrydowy SUV łączący dynamiczną jazdę z niskim spalaniem.",
-    "specyfikacja": {
-      "mileage": "5.8 l/100 km",
-      "acceleration": "8.0 s (0–100 km/h)",
-      "v_max": "180 km/h",
-      "gears": "brak (e-CVT)",
-      "transmission_type": "hybrydowa",
-      "height": "1620 mm",
-      "weight": "1650 kg",
-      "length": "4570 mm"
-    }
-  },
-  {
-    "model": "e:Ny1",
-    "segment": "SUV",
-    "door_options": [5],
-    "silniki": {
-      "benzynowe": null,
-      "diesle": null,
-      "hybrydowe": null,
-      "elektryczne": {
-        "typy": ["elektryczny silnik synchroniczny"],
-        "moc": "204 KM",
-        "moment_obrotowy": "310 Nm"
-      }
-    },
-    "charakterystyka": "Pierwszy w pełni elektryczny SUV Hondy z konkurencyjnym zasięgiem i szybkim ładowaniem.",
-    "specyfikacja": {
-      "mileage": "do 412 km (WLTP)",
-      "acceleration": "7.6 s (0–100 km/h)",
-      "v_max": "160 km/h",
-      "gears": "brak (jednobiegowa)",
-      "transmission_type": "elektryczna",
-      "height": "1580 mm",
-      "weight": "1750 kg",
-      "length": "4380 mm"
-    }
-  },
-  {
-    "model": "HR-V e:HEV",
-    "segment": "SUV",
-    "door_options": [5],
-    "silniki": {
-      "benzynowe": null,
-      "diesle": null,
-      "hybrydowe": {
-        "typy": ["1.5L i-MMD"],
+        "typy": ["1.5 e:HEV Hybrid"],
         "moc": "131 KM",
         "moment_obrotowy": "253 Nm"
       }
     },
-    "charakterystyka": "SUV o stylistyce coupe z samoładującym się układem hybrydowym.",
+    "charakterystyka": "Kompaktowy crossover z hybrydowym napędem i nowoczesnym designem.",
     "specyfikacja": {
-      "mileage": "5.4 l/100 km",
-      "acceleration": "10.6 s (0–100 km/h)",
+      "mileage": "5.4–5.7 l/100 km",
+      "acceleration": "10.7 s (0–100 km/h)",
       "v_max": "170 km/h",
       "gears": "brak (e-CVT)",
-      "transmission_type": "hybrydowa",
-      "height": "1582 mm",
-      "weight": "1387 kg",
+      "transmission_type": "automatyczna",
+      "height": "1580 mm",
+      "weight": "1350–1400 kg",
       "length": "4340 mm"
     }
   },
   {
-    "model": "Jazz e:HEV",
-    "segment": "Hatchback",
+    "model": "Honda Jazz",
+    "segment": "Miejski hatchback",
     "door_options": [5],
     "silniki": {
-      "benzynowe": null,
-      "diesle": null,
       "hybrydowe": {
-        "typy": ["1.5L i-MMD"],
+        "typy": ["1.5 e:HEV Hybrid"],
         "moc": "109 KM",
         "moment_obrotowy": "253 Nm"
       }
     },
-    "charakterystyka": "Komfortowy i przestronny hatchback z oszczędnym układem hybrydowym.",
+    "charakterystyka": "Praktyczny i oszczędny hatchback z wyjątkowo przestronnym wnętrzem i hybrydowym napędem.",
     "specyfikacja": {
-      "mileage": "4.5 l/100 km",
+      "mileage": "4.5–4.8 l/100 km",
       "acceleration": "9.4 s (0–100 km/h)",
       "v_max": "175 km/h",
       "gears": "brak (e-CVT)",
-      "transmission_type": "hybrydowa",
+      "transmission_type": "automatyczna",
       "height": "1526 mm",
-      "weight": "1220 kg",
+      "weight": "1250–1300 kg",
       "length": "4044 mm"
-    }
-  },
-  {
-    "model": "Civic e:HEV",
-    "segment": "Kompakt",
-    "door_options": [5],
-    "silniki": {
-      "benzynowe": null,
-      "diesle": null,
-      "hybrydowe": {
-        "typy": ["2.0L e:HEV"],
-        "moc": "184 KM",
-        "moment_obrotowy": "315 Nm"
-      }
-    },
-    "charakterystyka": "Sportowa hybryda premium łącząca dynamiczne osiągi z niskim spalaniem.",
-    "specyfikacja": {
-      "mileage": "4.7 l/100 km",
-      "acceleration": "7.8 s (0–100 km/h)",
-      "v_max": "180 km/h",
-      "gears": "brak (e-CVT)",
-      "transmission_type": "hybrydowa",
-      "height": "1408 mm",
-      "weight": "1500 kg",
-      "length": "4550 mm"
-    }
-  },
-  {
-    "model": "Civic Type R",
-    "segment": "Kompakt",
-    "door_options": [5],
-    "silniki": {
-      "benzynowe": {
-        "typy": ["2.0L VTEC Turbo"],
-        "moc": "329 KM",
-        "moment_obrotowy": "420 Nm"
-      },
-      "diesle": null,
-      "hybrydowe": null
     }
   }
 ]

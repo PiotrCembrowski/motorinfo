@@ -1,129 +1,124 @@
 [
   {
-    "model": "Audi A3",
-    "segment": "Kompaktowy",
-    "door_options": [3, 5],
+    "model": "Audi A1",
+    "segment": "Samochód miejski premium",
+    "door_options": [5],
     "silniki": {
       "benzynowe": {
         "typy": ["1.0 TFSI", "1.5 TFSI", "2.0 TFSI"],
-        "moc": "110–190 KM",
-        "moment_obrotowy": "200–320 Nm"
+        "moc": "95–207 KM",
+        "moment_obrotowy": "175–320 Nm"
+      }
+    },
+    "charakterystyka": "Kompaktowy hatchback o sportowym charakterze i wysokiej jakości wykończeniu wnętrza.",
+    "specyfikacja": {
+      "mileage": "5.0–6.8 l/100 km",
+      "acceleration": "6.5–10.8 s (0–100 km/h)",
+      "v_max": "180–250 km/h",
+      "gears": 6,
+      "transmission_type": "manualna/automatyczna",
+      "height": "1409 mm",
+      "weight": "1200–1375 kg",
+      "length": "4029 mm"
+    }
+  },
+  {
+    "model": "Audi A3",
+    "segment": "Kompaktowy premium",
+    "door_options": [4, 5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.0 TFSI", "1.5 TFSI", "2.0 TFSI"],
+        "moc": "110–310 KM",
+        "moment_obrotowy": "200–400 Nm"
       },
       "diesle": {
         "typy": ["2.0 TDI"],
-        "moc": "116–150 KM",
-        "moment_obrotowy": "300–360 Nm"
+        "moc": "116–200 KM",
+        "moment_obrotowy": "300–400 Nm"
       },
       "hybrydowe": {
         "typy": ["1.4 TFSI e"],
         "moc": "204–245 KM",
-        "moment_obrotowy": "350–400 Nm"
+        "moment_obrotowy": "400 Nm"
       }
     },
-    "charakterystyka": "Kompaktowy hatchback oferujący nowoczesne technologie i dynamiczną jazdę.",
+    "charakterystyka": "Kompaktowy samochód klasy premium z różnorodnymi opcjami napędu i nowoczesnymi technologiami.",
     "specyfikacja": {
-      "mileage": "4.0–6.5 l/100 km",
-      "acceleration": "6.8–8.4 s (0–100 km/h)",
-      "v_max": "210–240 km/h",
-      "gears": "6–7",
+      "mileage": "1.4–6.6 l/100 km",
+      "acceleration": "4.8–9.4 s (0–100 km/h)",
+      "v_max": "210–250 km/h",
+      "gears": 6,
       "transmission_type": "manualna/automatyczna",
-      "height": "1425 mm",
-      "weight": "1240–1500 kg",
+      "height": "1449 mm",
+      "weight": "1280–1625 kg",
       "length": "4343 mm"
     }
   },
   {
-    "model": "Audi Q5",
-    "segment": "SUV",
-    "door_options": [5],
-    "silniki": {
-      "benzynowe": {
-        "typy": ["2.0 TFSI"],
-        "moc": "204–265 KM",
-        "moment_obrotowy": "320–370 Nm"
-      },
-      "diesle": {
-        "typy": ["2.0 TDI", "3.0 TDI"],
-        "moc": "163–286 KM",
-        "moment_obrotowy": "380–620 Nm"
-      },
-      "hybrydowe": {
-        "typy": ["2.0 TFSI e"],
-        "moc": "299–367 KM",
-        "moment_obrotowy": "450–500 Nm"
-      }
-    },
-    "charakterystyka": "Luksusowy SUV łączący komfort, przestronność i zaawansowane technologie.",
-    "specyfikacja": {
-      "mileage": "5.4–8.5 l/100 km",
-      "acceleration": "5.1–8.1 s (0–100 km/h)",
-      "v_max": "220–240 km/h",
-      "gears": "7–8",
-      "transmission_type": "automatyczna",
-      "height": "1659 mm",
-      "weight": "1770–2020 kg",
-      "length": "4682 mm"
-    }
-  },
-  {
-    "model": "Audi e-tron GT",
-    "segment": "Sportowy elektryczny",
-    "door_options": [4],
-    "silniki": {
-      "elektryczne": {
-        "typy": ["Podwójny silnik elektryczny"],
-        "moc": "476–598 KM",
-        "moment_obrotowy": "630–830 Nm"
-      }
-    },
-    "charakterystyka": "Wysokowydajny elektryczny samochód sportowy z zaawansowaną aerodynamiką.",
-    "specyfikacja": {
-      "mileage": "do 488 km (WLTP)",
-      "acceleration": "3.3–4.1 s (0–100 km/h)",
-      "v_max": "245–250 km/h",
-      "gears": "2",
-      "transmission_type": "elektryczna",
-      "height": "1410 mm",
-      "weight": "2295 kg",
-      "length": "4989 mm"
-    }
-  },
-  {
-    "model": "Audi A6",
-    "segment": "Klasa wyższa",
+    "model": "Audi A4",
+    "segment": "Klasa średnia premium",
     "door_options": [4, 5],
     "silniki": {
       "benzynowe": {
-        "typy": ["2.0 TFSI", "3.0 TFSI"],
-        "moc": "204–340 KM",
-        "moment_obrotowy": "320–500 Nm"
+        "typy": ["2.0 TFSI"],
+        "moc": "150–265 KM",
+        "moment_obrotowy": "270–370 Nm"
       },
       "diesle": {
         "typy": ["2.0 TDI", "3.0 TDI"],
-        "moc": "163–286 KM",
-        "moment_obrotowy": "370–620 Nm"
-      },
-      "hybrydowe": {
-        "typy": ["2.0 TFSI e"],
-        "moc": "299–367 KM",
-        "moment_obrotowy": "450–500 Nm"
+        "moc": "136–341 KM",
+        "moment_obrotowy": "320–700 Nm"
       }
     },
-    "charakterystyka": "Elegancka limuzyna oferująca luksus, przestronność i innowacyjne technologie.",
+    "charakterystyka": "Stylowy sedan lub kombi klasy premium, idealny do długich podróży.",
     "specyfikacja": {
-      "mileage": "4.4–8.2 l/100 km",
-      "acceleration": "5.1–8.3 s (0–100 km/h)",
-      "v_max": "250 km/h",
-      "gears": "7–8",
+      "mileage": "4.5–7.8 l/100 km",
+      "acceleration": "4.6–9.5 s (0–100 km/h)",
+      "v_max": "220–250 km/h",
+      "gears": 8,
       "transmission_type": "automatyczna",
-      "height": "1457 mm",
-      "weight": "1680–1995 kg",
-      "length": "4939 mm"
+      "height": "1430 mm",
+      "weight": "1500–1900 kg",
+      "length": "4762 mm"
+    }
+  },
+  {
+    "model": "Audi Q3",
+    "segment": "SUV premium",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.5 TFSI", "2.0 TFSI"],
+        "moc": "150–245 KM",
+        "moment_obrotowy": "250–370 Nm"
+      },
+      "diesle": {
+        "typy": ["2.0 TDI"],
+        "moc": "150–200 KM",
+        "moment_obrotowy": "340–400 Nm"
+      },
+      "hybrydowe": {
+        "typy": ["1.4 TFSI e"],
+        "moc": "245 KM",
+        "moment_obrotowy": "400 Nm"
+      }
+    },
+    "charakterystyka": "Wszechstronny SUV premium z przestronnym wnętrzem i nowoczesnymi technologiami.",
+    "specyfikacja": {
+      "mileage": "1.5–7.5 l/100 km",
+      "acceleration": "6.8–9.5 s (0–100 km/h)",
+      "v_max": "210–250 km/h",
+      "gears": 7,
+      "transmission_type": "automatyczna",
+      "height": "1610 mm",
+      "weight": "1650–1900 kg",
+      "length": "4485 mm"
     }
   },
   {
     "model": "Audi Q7",
-    "segment": "SUV",
+    "segment": "Luksusowy SUV",
     "door_options": [5],
     "silniki": {
       "benzynowe": {
@@ -139,17 +134,19 @@
       "hybrydowe": {
         "typy": ["3.0 TFSI e"],
         "moc": "381–462 KM",
-        "moment_obrotowy": "600–700 Nm"
+        "moment_obrotowy": "700 Nm"
       }
     },
-    "charakterystyka": "Duży SUV premium oferujący przestronność, komfort i zaawansowane systemy wspomagające.",
+    "charakterystyka": "Ekskluzywny SUV z zaawansowanymi technologiami i opcjami napędu hybrydowego.",
     "specyfikacja": {
-      "mileage": "6.6–9.1 l/100 km",
-      "acceleration": "5.7–7.1 s (0–100 km/h)",
-      "v_max": "241–250 km/h",
-      "gears": "8",
+      "mileage": "2.6–9.0 l/100 km",
+      "acceleration": "5.7–7.3 s (0–100 km/h)",
+      "v_max": "225–250 km/h",
+      "gears": 8,
       "transmission_type": "automatyczna",
-      "height": "1741 mm"
+      "height": "1741 mm",
+      "weight": "2200–2500 kg",
+      "length": "5063 mm"
     }
   }
 ]

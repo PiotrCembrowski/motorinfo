@@ -1,0 +1,157 @@
+[
+  {
+    "model": "Opel Corsa",
+    "segment": "Samochód miejski",
+    "door_options": [3, 5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.2", "1.2 Turbo"],
+        "moc": "75–130 KM",
+        "moment_obrotowy": "118–230 Nm"
+      },
+      "diesle": {
+        "typy": ["1.5 d"],
+        "moc": "102–120 KM",
+        "moment_obrotowy": "250–300 Nm"
+      },
+      "elektryczne": {
+        "typy": ["Corsa-e"],
+        "moc": "136 KM",
+        "moment_obrotowy": "260 Nm"
+      }
+    },
+    "charakterystyka": "Kompaktowy hatchback oferujący nowoczesny design i efektywność paliwową.",
+    "specyfikacja": {
+      "mileage": "4.0–6.0 l/100 km",
+      "acceleration": "8.0–9.5 s (0–100 km/h)",
+      "v_max": "180–200 km/h",
+      "gears": "5–6",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1433 mm",
+      "weight": "980–1150 kg",
+      "length": "4021 mm"
+    }
+  },
+  {
+    "model": "Opel Astra",
+    "segment": "Kompaktowy",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.2 Turbo", "1.4 Turbo"],
+        "moc": "110–145 KM",
+        "moment_obrotowy": "205–250 Nm"
+      },
+      "diesle": {
+        "typy": ["1.5 d", "2.0 d"],
+        "moc": "105–175 KM",
+        "moment_obrotowy": "260–400 Nm"
+      },
+      "elektryczne": {
+        "typy": ["Astra-e"],
+        "moc": "180 KM",
+        "moment_obrotowy": "360 Nm"
+      }
+    },
+    "charakterystyka": "Wszechstronny hatchback lub kombi z przestronnym wnętrzem i zaawansowanymi technologiami.",
+    "specyfikacja": {
+      "mileage": "4.5–7.0 l/100 km",
+      "acceleration": "7.5–9.0 s (0–100 km/h)",
+      "v_max": "200–220 km/h",
+      "gears": "6",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1485 mm",
+      "weight": "1300–1600 kg",
+      "length": "4370 mm"
+    }
+  },
+  {
+    "model": "Opel Grandland",
+    "segment": "SUV",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.2 Turbo", "1.6 Turbo"],
+        "moc": "130–180 KM",
+        "moment_obrotowy": "230–250 Nm"
+      },
+      "diesle": {
+        "typy": ["1.5 d", "2.0 d"],
+        "moc": "130–180 KM",
+        "moment_obrotowy": "300–400 Nm"
+      },
+      "elektryczne": {
+        "typy": ["Grandland-e"],
+        "moc": "300 KM",
+        "moment_obrotowy": "520 Nm"
+      }
+    },
+    "charakterystyka": "Luksusowy SUV średniej wielkości z przestronnym wnętrzem i nowoczesnym designem.",
+    "specyfikacja": {
+      "mileage": "5.0–8.0 l/100 km",
+      "acceleration": "8.0–10.0 s (0–100 km/h)",
+      "v_max": "200–220 km/h",
+      "gears": "6–8",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1638 mm",
+      "weight": "1600–2000 kg",
+      "length": "4477 mm"
+    }
+  },
+  {
+    "model": "Opel Mokka",
+    "segment": "SUV",
+    "door_options": [5],
+    "silniki": {
+      "benzynowe": {
+        "typy": ["1.2 Turbo"],
+        "moc": "100–130 KM",
+        "moment_obrotowy": "205–230 Nm"
+      },
+      "diesle": {
+        "typy": ["1.5 d"],
+        "moc": "110–120 KM",
+        "moment_obrotowy": "250–300 Nm"
+      },
+      "elektryczne": {
+        "typy": ["Mokka-e"],
+        "moc": "136 KM",
+        "moment_obrotowy": "260 Nm"
+      }
+    },
+    "charakterystyka": "Kompaktowy SUV z dynamicznym designem i efektywnymi jednostkami napędowymi.",
+    "specyfikacja": {
+      "mileage": "4.5–6.5 l/100 km",
+      "acceleration": "8.5–9.5 s (0–100 km/h)",
+      "v_max": "180–200 km/h",
+      "gears": "5–6",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1531 mm",
+      "weight": "1300–1500 kg",
+      "length": "4151 mm"
+    }
+  },
+  {
+    "model": "Opel Zafira Life",
+    "segment": "MPV",
+    "door_options": [5],
+    "silniki": {
+      "diesle": {
+        "typy": ["1.5 d", "2.0 d"],
+        "moc": "120–180 KM",
+        "moment_obrotowy": "300–400 Nm"
+      }
+    },
+    "charakterystyka": "Przestronny minivan idealny dla dużych rodzin i przewozu pasażerów.",
+    "specyfikacja": {
+      "mileage": "6.0–8.0 l/100 km",
+      "acceleration": "10.0–12.0 s (0–100 km/h)",
+      "v_max": "170–190 km/h",
+      "gears": "6",
+      "transmission_type": "manualna/automatyczna",
+      "height": "1890 mm",
+      "weight": "1800–2200 kg",
+      "length": "4956 mm"
+    }
+  }
+]
