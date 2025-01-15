@@ -4,12 +4,23 @@ import Competition from "@/app/components/car/Competition";
 import CompanyVehicles from "@/app/components/car/CompanyVehicles";
 import Image from "next/image";
 import Link from "next/link";
+import { promises as fs } from "fs";
 
 const page = async () => {
   const headerList = await headers();
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
+  const brandName = pathname?.split("/")[1];
+
+  const data = await fs.readFile(
+    process.cwd() + `/data/${brandName}.json`,
+    "utf-8"
+  );
+
+  const car = JSON.parse(data);
+
+  console.log(car);
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
