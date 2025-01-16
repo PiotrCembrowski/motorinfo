@@ -37,6 +37,9 @@ const page = async () => {
   });
 
   console.log(car!);
+  const benzynowe: object = car!.silniki.benzynowe.typy;
+  const benzynoweMoc: string = car!.silniki.benzynowe.moc;
+  console.log(benzynowe);
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
@@ -68,27 +71,21 @@ const page = async () => {
               </tr>
               <tr className="">
                 <td className="w-1/2">Engine type</td>
-                <td>Turbo charged with VTEC</td>
-              </tr>
-              <tr>
-                <td>Displacment</td>
-                <td>2000 cc3</td>
+                {benzynowe?.map((silnik, index) => {
+                  return <td key={index}>{silnik}, </td>;
+                })}
               </tr>
               <tr>
                 <td>Power</td>
-                <td>329 hp</td>
+                <td>{benzynoweMoc}</td>
               </tr>
               <tr>
                 <td>Cylinders</td>
                 <td>4</td>
               </tr>
               <tr>
-                <td>Turbo</td>
-                <td>Yes</td>
-              </tr>
-              <tr>
                 <td>Torque</td>
-                <td>420 Nm</td>
+                <td>{car!.silniki.benzynowe.moment_obrotowy}</td>
               </tr>
             </tbody>
           </table>
