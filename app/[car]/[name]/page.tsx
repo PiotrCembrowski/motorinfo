@@ -37,16 +37,14 @@ const page = async () => {
   });
 
   console.log(car!);
-  const benzynowe: object = car!.silniki.benzynowe.typy;
-  const benzynoweMoc: string = car!.silniki.benzynowe.moc;
-  console.log(benzynowe);
+  const benzynowe = car!.silniki.benzynowe.typy;
+  const benzynoweMoc = car!.silniki.benzynowe.moc;
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
       <div>
-        <Link href="/honda">{brandName} vehicles</Link>
+        <Link href={`/${brandName}`}>{brandName} vehicles</Link>
         <h1 className="capitalize">{name}</h1>
-        <h2>Gen. 1</h2>
         <Image src="/images/honda.jpg" alt="car" width={500} height={200} />
         <div className="grid grid-cols-1 gap-4 mt-4">
           <div className="bg-white py-4 px-8 shadow-sm">
@@ -66,11 +64,11 @@ const page = async () => {
                 <td>{car!.segment}</td>
               </tr>
               <tr>
-                <td>Doors:</td>
+                <td>Doors options:</td>
                 <td>{car!.door_options}</td>
               </tr>
               <tr className="">
-                <td className="w-1/2">Engine type</td>
+                <td className="w-1/3">Engine type</td>
                 {benzynowe?.map((silnik, index) => {
                   return <td key={index}>{silnik}, </td>;
                 })}
@@ -78,10 +76,6 @@ const page = async () => {
               <tr>
                 <td>Power</td>
                 <td>{benzynoweMoc}</td>
-              </tr>
-              <tr>
-                <td>Cylinders</td>
-                <td>4</td>
               </tr>
               <tr>
                 <td>Torque</td>
@@ -94,35 +88,29 @@ const page = async () => {
             <table>
               <tbody>
                 <tr>
-                  <td className="w-1/3">Mileage</td>
-                  <td></td>
+                  <td className="w-1/2">Mileage</td>
+                  <td>{car!.specyfikacja.mileage}</td>
                 </tr>
                 <tr>
-                  <td>0 - 100 km/h</td>
-                  <td>5,4 s</td>
+                  <td>Acceleration</td>
+                  <td>{car!.specyfikacja.acceleration}</td>
                 </tr>
                 <tr>
                   <td className="align-top">V-max</td>
-                  <td>
-                    2 minuty 23 sekundy: Type R to najszybszy samochód z napędem
-                    na przednie koła, jaki kiedykolwiek pokonał jedno 5,8
-                    kilometrowe okrążenie na legendarnym torze Suzuka.
-                  </td>
+                  <td>{car!.specyfikacja.v_max}</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div>
             <h4 className="mt-4">Transmission:</h4>
-            <p>6-gears</p>
-            <p>manual</p>
+            <p>{car!.specyfikacja.transmission_type}</p>
           </div>
           <div>
             <h4 className="mt-4">Measurements: </h4>
-            <p>wysokość</p>
-            <p>szerokość</p>
-            <p>długość</p>
-            <p>5 drzwi</p>
+            <p>wysokość: {car!.specyfikacja.height}</p>
+            <p>długość: {car!.specyfikacja.length}</p>
+            <p>waga: {car!.specyfikacja.weight}</p>
           </div>
         </div>
       </div>
