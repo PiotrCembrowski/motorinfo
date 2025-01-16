@@ -6,6 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { promises as fs } from "fs";
 
+type Car = {
+  model: string;
+  charakterystyka: string;
+  door_options: string[];
+  segment: string;
+  silniki: string[];
+  specyfikacja: string[];
+};
+
 const page = async () => {
   const headerList = await headers();
   const pathname = headerList.get("x-url");
@@ -18,14 +27,21 @@ const page = async () => {
     "utf-8"
   );
 
-  const car = JSON.parse(data);
+  let car: Car;
 
-  console.log(car);
+  const cars = JSON.parse(data);
+  await cars.forEach((element: Car) => {
+    if (element.model == name) {
+      car = element;
+    }
+  });
+
+  console.log(car!);
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
       <div>
-        <Link href="/honda">Honda vehicles</Link>
+        <Link href="/honda">{brandName} vehicles</Link>
         <h1 className="capitalize">{name}</h1>
         <h2>Gen. 1</h2>
         <Image src="/images/honda.jpg" alt="car" width={500} height={200} />
@@ -44,11 +60,11 @@ const page = async () => {
             <tbody>
               <tr>
                 <td>Segment</td>
-                <td>Compact</td>
+                <td>{car!.segment}</td>
               </tr>
               <tr>
                 <td>Doors:</td>
-                <td>3,4,5</td>
+                <td>{car!.door_options}</td>
               </tr>
               <tr className="">
                 <td className="w-1/2">Engine type</td>
