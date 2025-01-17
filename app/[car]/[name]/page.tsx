@@ -11,8 +11,8 @@ type Car = {
   charakterystyka: string;
   door_options: string[];
   segment: string;
-  silniki: string[];
-  specyfikacja: string[];
+  silniki: object;
+  specyfikacja: object;
 };
 
 const page = async () => {
@@ -37,8 +37,8 @@ const page = async () => {
   });
 
   console.log(car!);
-  const benzynowe = car!.silniki.benzynowe.typy;
-  const benzynoweMoc = car!.silniki.benzynowe.moc;
+
+  const benzynowe = car!.silniki.benzynowe;
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
@@ -69,13 +69,13 @@ const page = async () => {
               </tr>
               <tr className="">
                 <td className="w-1/3">Engine type</td>
-                {benzynowe?.map((silnik, index) => {
+                {benzynowe?.typy.map((silnik, index) => {
                   return <td key={index}>{silnik}, </td>;
                 })}
               </tr>
               <tr>
                 <td>Power</td>
-                <td>{benzynoweMoc}</td>
+                <td>{benzynowe.moc}</td>
               </tr>
               <tr>
                 <td>Torque</td>
