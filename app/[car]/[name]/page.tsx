@@ -71,67 +71,98 @@ const page = async () => {
                 <td>{car!.door_options}</td>
               </tr>
               <tr>
-                <td>Gasoline type:</td>
+                <td>Engine type:</td>
                 {benzynowe ? (
                   benzynowe?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
+                    return <td key={index}>Gasoline: {silnik}, </td>;
                   })
                 ) : (
-                  <td>Not available</td>
+                  <td>Gasoline: not available</td>
                 )}
               </tr>
               <tr>
-                <td>Electric type:</td>
+                <td></td>
                 {electric ? (
                   electric?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
+                    return <td key={index}>Electric: {silnik}, </td>;
                   })
                 ) : (
-                  <td>Not available</td>
+                  <td>Electric: not available</td>
                 )}
               </tr>
               <tr>
-                <td>Diesel type:</td>
+                <td></td>
                 {diesle ? (
                   diesle?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
+                    return <td key={index}>Diesel: {silnik}, </td>;
                   })
                 ) : (
-                  <td>Not available</td>
+                  <td>Diesel: not available</td>
                 )}
               </tr>
               <tr className="">
-                <td className="w-1/3">Hybrid type</td>
+                <td className="w-1/3"></td>
                 {hybrid ? (
                   hybrid?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
+                    return <td key={index}>Hybrid: {silnik}, </td>;
                   })
                 ) : (
-                  <td>Not available</td>
+                  <td>Hybrid: not available</td>
                 )}
               </tr>
               <tr>
-                <td>Gasoline Power</td>
-                <td>{benzynowe ? benzynowe.moc : "Not available"}</td>
+                <td>Power</td>
+                <td>
+                  {benzynowe
+                    ? `Gasoline: ${benzynowe.moc}`
+                    : "Gasoline: not available"}
+                </td>
               </tr>
               <tr>
-                <td>Eletric Power:</td>
-                <td>{electric ? electric.moc : "Not available"}</td>
+                <td></td>
+                <td>
+                  {electric
+                    ? `Electric: ${electric.moc}`
+                    : "Electric: not available"}
+                </td>
               </tr>
               <tr>
-                <td>Diesel Power:</td>
-                <td>{diesle ? diesle.moc : "Not available"}</td>
+                <td></td>
+                <td>
+                  {diesle ? `Diesel: ${diesle.moc}` : "Diesel: not available"}
+                </td>
               </tr>
               <tr>
-                <td>Hybrid Power:</td>
-                <td>{hybrid ? hybrid.moc : "Not available"}</td>
+                <td></td>
+                <td>
+                  {hybrid ? `Hybrid: ${hybrid.moc}` : "Hybrid: not available"}
+                </td>
               </tr>
               <tr>
                 <td>Torque</td>
-                {benzynowe && <td>Gasoline: {benzynowe.moment_obrotowy}</td>}
-                {diesle && <td>Diesle: {diesle.moment_obrotowy}</td>}
-                {electric && <td>Electric: {electric.moment_obrotowy}</td>}
-                {hybrid && <td>Hybrid: {hybrid.moment_obrotowy}</td>}
+                <td>
+                  Gasoline:{" "}
+                  {benzynowe ? benzynowe.moment_obrotowy : "not available"}
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Diesle: {diesle ? diesle.moment_obrotowy : "not available"}
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Electric:{" "}
+                  {electric ? electric.moment_obrotowy : "not available"}
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Hybrid: {hybrid ? hybrid.moment_obrotowy : "not available"}
+                </td>
               </tr>
             </tbody>
           </table>
