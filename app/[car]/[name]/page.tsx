@@ -70,38 +70,68 @@ const page = async () => {
                 <td>Doors options:</td>
                 <td>{car!.door_options}</td>
               </tr>
-              <tr className="">
-                <td className="w-1/3">Engine type</td>
-                {benzynowe &&
+              <tr>
+                <td>Gasoline type:</td>
+                {benzynowe ? (
                   benzynowe?.typy.map((silnik, index) => {
                     return <td key={index}>{silnik}, </td>;
-                  })}
-                {electric &&
-                  electric?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
-                  })}
-                {diesle &&
-                  diesle?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
-                  })}
-                {hybrid &&
-                  hybrid?.typy.map((silnik, index) => {
-                    return <td key={index}>{silnik}, </td>;
-                  })}
+                  })
+                ) : (
+                  <td>Not available</td>
+                )}
               </tr>
               <tr>
-                <td>Power</td>
-                {benzynowe && <td>Gasoline: {benzynowe.moc}</td>}
-                {diesle && <td>Diesle: {diesle.moc}</td>}
-                {electric && <td>Electric: {electric.moc}</td>}
-                {hybrid && <td>Hybrid: {hybrid.moc}</td>}
+                <td>Electric type:</td>
+                {electric ? (
+                  electric?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })
+                ) : (
+                  <td>Not available</td>
+                )}
+              </tr>
+              <tr>
+                <td>Diesel type:</td>
+                {diesle ? (
+                  diesle?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })
+                ) : (
+                  <td>Not available</td>
+                )}
+              </tr>
+              <tr className="">
+                <td className="w-1/3">Hybrid type</td>
+                {hybrid ? (
+                  hybrid?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })
+                ) : (
+                  <td>Not available</td>
+                )}
+              </tr>
+              <tr>
+                <td>Gasoline Power</td>
+                <td>{benzynowe ? benzynowe.moc : "Not available"}</td>
+              </tr>
+              <tr>
+                <td>Eletric Power:</td>
+                <td>{electric ? electric.moc : "Not available"}</td>
+              </tr>
+              <tr>
+                <td>Diesel Power:</td>
+                <td>{diesle ? diesle.moc : "Not available"}</td>
+              </tr>
+              <tr>
+                <td>Hybrid Power:</td>
+                <td>{hybrid ? hybrid.moc : "Not available"}</td>
               </tr>
               <tr>
                 <td>Torque</td>
-                {benzynowe && <td>{benzynowe.moment_obrotowy}</td>}
-                {diesle && <td>{diesle.moment_obrotowy}</td>}
-                {electric && <td>{electric.moment_obrotowy}</td>}
-                {hybrid && <td>{hybrid.moment_obrotowy}</td>}
+                {benzynowe && <td>Gasoline: {benzynowe.moment_obrotowy}</td>}
+                {diesle && <td>Diesle: {diesle.moment_obrotowy}</td>}
+                {electric && <td>Electric: {electric.moment_obrotowy}</td>}
+                {hybrid && <td>Hybrid: {hybrid.moment_obrotowy}</td>}
               </tr>
             </tbody>
           </table>
