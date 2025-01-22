@@ -39,6 +39,9 @@ const page = async () => {
   console.log(car!);
 
   const benzynowe = car!.silniki.benzynowe;
+  const electric = car!.silniki.elektryczne;
+  const diesle = car!.silniki.diesel;
+  const hybrid = car!.silniki.hybrydowe;
 
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
@@ -69,17 +72,30 @@ const page = async () => {
               </tr>
               <tr className="">
                 <td className="w-1/3">Engine type</td>
-                {benzynowe?.typy.map((silnik, index) => {
-                  return <td key={index}>{silnik}, </td>;
-                })}
+                {benzynowe &&
+                  benzynowe?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })}
+                {electric &&
+                  electric?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })}
+                {diesle &&
+                  diesle?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })}
+                {hybrid &&
+                  hybrid?.typy.map((silnik, index) => {
+                    return <td key={index}>{silnik}, </td>;
+                  })}
               </tr>
               <tr>
                 <td>Power</td>
-                <td>{benzynowe.moc}</td>
+                <td>{benzynowe && benzynowe.moc}</td>
               </tr>
               <tr>
                 <td>Torque</td>
-                <td>{car!.silniki.benzynowe.moment_obrotowy}</td>
+                <td>{benzynowe && benzynowe.moment_obrotowy}</td>
               </tr>
             </tbody>
           </table>
