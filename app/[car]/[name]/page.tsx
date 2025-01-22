@@ -91,11 +91,17 @@ const page = async () => {
               </tr>
               <tr>
                 <td>Power</td>
-                <td>{benzynowe && benzynowe.moc}</td>
+                {benzynowe && <td>Gasoline: {benzynowe.moc}</td>}
+                {diesle && <td>Diesle: {diesle.moc}</td>}
+                {electric && <td>Electric: {electric.moc}</td>}
+                {hybrid && <td>Hybrid: {hybrid.moc}</td>}
               </tr>
               <tr>
                 <td>Torque</td>
-                <td>{benzynowe && benzynowe.moment_obrotowy}</td>
+                {benzynowe && <td>{benzynowe.moment_obrotowy}</td>}
+                {diesle && <td>{diesle.moment_obrotowy}</td>}
+                {electric && <td>{electric.moment_obrotowy}</td>}
+                {hybrid && <td>{hybrid.moment_obrotowy}</td>}
               </tr>
             </tbody>
           </table>
