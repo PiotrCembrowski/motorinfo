@@ -46,7 +46,9 @@ const page = async () => {
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
       <div>
-        <Link href={`/${brandName}`}>{brandName} vehicles</Link>
+        <Link href={`/${brandName}`}>
+          <h5>Back to {brandName} vehicles</h5>
+        </Link>
         <h1 className="capitalize">{name}</h1>
         <Image src="/images/honda.jpg" alt="car" width={500} height={200} />
         <div className="grid grid-cols-1 gap-4 mt-4">
