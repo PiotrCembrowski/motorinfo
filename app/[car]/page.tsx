@@ -17,14 +17,16 @@ const page = async () => {
   return (
     <div>
       <h1>{name}</h1>
-      {data.map((car, index: number) => {
-        return (
-          <Link href={`${name}/${car.model}`} key={index}>
-            <Image src={img} />
-            <h4>{car.model}</h4>
-          </Link>
-        );
-      })}
+      <div className="grid grid-cols-8">
+        {data.map((car, index: number) => {
+          return (
+            <Link href={`${name}/${car.model}`} key={index}>
+              <Image src={img} alt={car.model} width={150} height={150} />
+              <h5 className="mt-2">{car.model}</h5>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
