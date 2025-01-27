@@ -3,7 +3,7 @@ import NavbarMenu from "./NavbarMenu";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="py-4">
       <NavbarMenu />
     </div>
   );
