@@ -2,7 +2,6 @@ import React from "react";
 import { headers } from "next/headers";
 import { promises as fs } from "fs";
 import Link from "next/link";
-import img from "@/public/images/honda.jpg";
 import Image from "next/image";
 
 const page = async () => {
@@ -21,7 +20,12 @@ const page = async () => {
         {data.map((car, index: number) => {
           return (
             <Link href={`${name}/${car.model}`} key={index}>
-              <Image src={img} alt={car.model} width={150} height={150} />
+              <Image
+                src={car.image_url}
+                alt={car.model}
+                width={150}
+                height={150}
+              />
               <h5 className="mt-2">{car.model}</h5>
             </Link>
           );

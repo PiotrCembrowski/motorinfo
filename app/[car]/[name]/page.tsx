@@ -50,7 +50,7 @@ const page = async () => {
           <h5>Back to {brandName} vehicles</h5>
         </Link>
         <h1 className="capitalize">{name}</h1>
-        <Image src="/images/honda.jpg" alt="car" width={500} height={200} />
+        <Image src={car!.image_url} alt="car" width={500} height={200} />
         <div className="grid grid-cols-1 gap-4 mt-4">
           <div className="bg-white py-4 px-8 shadow-sm">
             <Competition />
