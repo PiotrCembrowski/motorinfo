@@ -21,7 +21,7 @@ const page = async () => {
           return (
             <Link href={`${name}/${car.model}`} key={index}>
               <Image
-                src={car.image_url ? car.image_url : ""}
+                src={car.image_url ? car.image_url : null}
                 alt={car.model}
                 width={150}
                 height={150}

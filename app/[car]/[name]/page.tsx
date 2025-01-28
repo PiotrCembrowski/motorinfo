@@ -6,12 +6,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { promises as fs } from "fs";
 
+type Silniki = {
+  benzynowe: object;
+  elektryczne: object;
+  diesel: object;
+  hybrydowe: object;
+};
+
 type Car = {
   model: string;
   charakterystyka: string;
   door_options: string[];
   segment: string;
-  silniki: object;
+  silniki: Silniki;
   specyfikacja: object;
 };
 
@@ -29,7 +36,7 @@ const page = async () => {
 
   let car: Car;
 
-  const cars = JSON.parse(data);
+  const cars: Car[] = JSON.parse(data);
   await cars.forEach((element: Car) => {
     if (element.model == name) {
       car = element;
@@ -51,7 +58,7 @@ const page = async () => {
         </Link>
         <h1 className="capitalize">{name}</h1>
         <Image
-          src={car!.image_url ? car!.image_url : ""}
+          src={car!.image_url ? car!.image_url : null}
           alt="car"
           width={500}
           height={200}
