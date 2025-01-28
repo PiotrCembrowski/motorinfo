@@ -87,7 +87,7 @@ const page = async () => {
               <tr>
                 <td>Engine type:</td>
                 {benzynowe ? (
-                  benzynowe?.typy.map((silnik, index) => {
+                  benzynowe.typy.map((silnik, index) => {
                     return <td key={index}>Gasoline: {silnik}, </td>;
                   })
                 ) : (
