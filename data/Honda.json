@@ -1,6 +1,7 @@
 [
   {
     "model": "Honda Civic",
+    "image_url": "/images/honda.jpg",
     "segment": "Kompaktowy",
     "door_options": [4, 5],
     "silniki": {
@@ -29,6 +30,7 @@
   },
   {
     "model": "Honda Accord",
+    "image_url": "/images/accord.png",
     "segment": "Klasa średnia",
     "door_options": [4],
     "silniki": {
@@ -52,6 +54,7 @@
   },
   {
     "model": "Honda CR-V",
+    "image_url": "/images/crv.png",
     "segment": "SUV",
     "door_options": [5],
     "silniki": {
