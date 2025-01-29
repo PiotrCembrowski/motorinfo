@@ -1,6 +1,7 @@
 [
   {
     "model": "BMW iX",
+    "image_url": "/images/bmwix.png",
     "segment": "SUV",
     "door_options": [5],
     "silniki": {
@@ -27,6 +28,7 @@
   },
   {
     "model": "BMW serii 3 Limuzyna",
+    "image_url": "/images/bmw3.png",
     "segment": "Kompakt",
     "door_options": [4],
     "silniki": {
@@ -60,6 +62,7 @@
   },
   {
     "model": "BMW X5",
+    "image_url": "/images/bmwx5.png",
     "segment": "SUV",
     "door_options": [5],
     "silniki": {
@@ -93,6 +96,7 @@
   },
   {
     "model": "BMW serii 5 Limuzyna",
+    "image_url": "/images/bmw5.png",
     "segment": "Klasa wyższa",
     "door_options": [4],
     "silniki": {
@@ -126,6 +130,7 @@
   },
   {
     "model": "BMW Z4 Roadster",
+    "image_url": "/images/bmwz4.jpg",
     "segment": "Sportowy",
     "door_options": [2],
     "silniki": {
