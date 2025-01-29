@@ -120,7 +120,7 @@ const page = async () => {
               </tr>
               <tr>
                 <td>Engine type:</td>
-                {benzynowe ? (
+                {benzynowe.typy ? (
                   benzynowe.typy.map((silnik, index) => {
                     return <td key={index}>Gasoline: {silnik}, </td>;
                   })
@@ -130,7 +130,7 @@ const page = async () => {
               </tr>
               <tr>
                 <td></td>
-                {electric ? (
+                {electric.typy ? (
                   electric?.typy.map((silnik, index) => {
                     return <td key={index}>Electric: {silnik}, </td>;
                   })
@@ -140,7 +140,7 @@ const page = async () => {
               </tr>
               <tr>
                 <td></td>
-                {diesle ? (
+                {diesle.typy ? (
                   diesle?.typy.map((silnik, index) => {
                     return <td key={index}>Diesel: {silnik}, </td>;
                   })
@@ -150,7 +150,7 @@ const page = async () => {
               </tr>
               <tr className="">
                 <td className="w-1/3"></td>
-                {hybrid ? (
+                {hybrid.typy ? (
                   hybrid?.typy.map((silnik, index) => {
                     return <td key={index}>Hybrid: {silnik}, </td>;
                   })
