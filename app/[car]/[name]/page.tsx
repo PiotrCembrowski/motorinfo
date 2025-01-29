@@ -5,6 +5,7 @@ import CompanyVehicles from "@/app/components/car/CompanyVehicles";
 import Image from "next/image";
 import Link from "next/link";
 import { promises as fs } from "fs";
+import img from "@/public/images/honda.jpg";
 
 type Silniki = {
   benzynowe: object;
@@ -15,6 +16,7 @@ type Silniki = {
 
 type Car = {
   model: string;
+  image_url: string;
   charakterystyka: string;
   door_options: string[];
   segment: string;
@@ -58,7 +60,7 @@ const page = async () => {
         </Link>
         <h1 className="capitalize">{name}</h1>
         <Image
-          src={car!.image_url ? car!.image_url : null}
+          src={car!.image_url ? car!.image_url : img}
           alt="car"
           width={500}
           height={200}
