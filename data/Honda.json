@@ -30,7 +30,7 @@
   },
   {
     "model": "Honda Accord",
-    "image_url": "/images/accord.png",
+    "image_url": "/images/accord.jpg",
     "segment": "Klasa średnia",
     "door_options": [4],
     "silniki": {
@@ -78,6 +78,7 @@
   },
   {
     "model": "Honda HR-V",
+    "image_url": "/images/hrv.jpg",
     "segment": "Crossover",
     "door_options": [5],
     "silniki": {
@@ -101,6 +102,7 @@
   },
   {
     "model": "Honda Jazz",
+    "image_url": "/images/jazz.jpeg",
     "segment": "Miejski hatchback",
     "door_options": [5],
     "silniki": {

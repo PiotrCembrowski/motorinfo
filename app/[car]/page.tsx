@@ -24,7 +24,7 @@ const page = async () => {
                 src={car.image_url ? car.image_url : null}
                 alt={car.model}
                 width={150}
-                height={150}
+                height={100}
               />
               <h5 className="mt-2">{car.model}</h5>
             </Link>
