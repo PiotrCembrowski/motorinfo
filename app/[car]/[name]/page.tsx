@@ -7,11 +7,43 @@ import Link from "next/link";
 import { promises as fs } from "fs";
 import img from "@/public/images/honda.jpg";
 
+type Specification = {
+  acceleration: string;
+  mileage: string;
+  v_max: string;
+  transmission_type: string;
+  height: string;
+  weight: string;
+  length: string;
+};
+
+type Benzynowe = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+type Electric = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+type Diesel = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+type Hybrid = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+
 type Silniki = {
-  benzynowe: object;
-  elektryczne: object;
-  diesel: object;
-  hybrydowe: object;
+  benzynowe: Benzynowe;
+  elektryczne: Electric;
+  diesel: Diesel;
+  hybrydowe: Hybrid;
+  specyfikacja: Specification;
 };
 
 type Car = {
@@ -21,7 +53,7 @@ type Car = {
   door_options: string[];
   segment: string;
   silniki: Silniki;
-  specyfikacja: object;
+  specyfikacja: Specification;
 };
 
 const page = async () => {
