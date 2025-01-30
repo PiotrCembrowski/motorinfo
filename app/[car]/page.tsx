@@ -3,6 +3,56 @@ import { headers } from "next/headers";
 import { promises as fs } from "fs";
 import Link from "next/link";
 import Image from "next/image";
+import img from "@/public/images/honda.jpg";
+
+type Specification = {
+  acceleration: string;
+  mileage: string;
+  v_max: string;
+  transmission_type: string;
+  height: string;
+  weight: string;
+  length: string;
+};
+
+type Benzynowe = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+type Electric = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+type Diesel = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+type Hybrid = {
+  typy: string[];
+  moc: string;
+  moment_obrotowy: string;
+};
+
+type Silniki = {
+  benzynowe: Benzynowe;
+  elektryczne: Electric;
+  diesel: Diesel;
+  hybrydowe: Hybrid;
+  specyfikacja: Specification;
+};
+
+type Car = {
+  model: string;
+  image_url: string;
+  charakterystyka: string;
+  door_options: string[];
+  segment: string;
+  silniki: Silniki;
+  specyfikacja: Specification;
+};
 
 const page = async () => {
   const headerList = await headers();
@@ -17,11 +67,11 @@ const page = async () => {
     <div>
       <h1>{name}</h1>
       <div className="grid grid-cols-8">
-        {data.map((car, index: number) => {
+        {data.map((car: Car, index: number) => {
           return (
             <Link href={`${name}/${car.model}`} key={index}>
               <Image
-                src={car.image_url ? car.image_url : null}
+                src={car.image_url ? car.image_url : img}
                 alt={car.model}
                 width={150}
                 height={100}
