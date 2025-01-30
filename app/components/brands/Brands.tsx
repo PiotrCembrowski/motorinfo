@@ -2,11 +2,16 @@ import React from "react";
 import BrandItem from "./BrandItem";
 import { promises as fs } from "fs";
 
+type Brand = {
+  brand: string;
+  img_url: string;
+};
+
 const Brands = async () => {
   const brand = await fs.readFile(process.cwd() + "/data/brands.json", "utf-8");
   const data = await JSON.parse(brand);
 
-  const content = data?.map((el, index: number) => {
+  const content = data?.map((el: Brand, index: number) => {
     return <BrandItem brand={el} key={index} />;
   });
 
