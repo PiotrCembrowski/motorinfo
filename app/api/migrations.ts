@@ -1,4 +1,3 @@
-import { resolve } from "path";
 import { db } from "./database";
 
 export const migrate = () => {
@@ -29,6 +28,18 @@ export const apiGet = async (query: string) => {
         return reject(err);
       }
       return resolve(row);
+    });
+  });
+};
+
+export const apiPost = async (query: string, values: stringp[]) => {
+  return await new Promise((resolve, reject) => {
+    db.run(query, values, function (err) {
+      if (err) {
+        console.log(err);
+        reject(err);
+      }
+      resolve(null);
     });
   });
 };
