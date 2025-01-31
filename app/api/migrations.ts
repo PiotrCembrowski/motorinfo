@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import { db } from "./database";
 
 export const migrate = () => {
@@ -17,5 +18,17 @@ export const migrate = () => {
         console.log("Brands table created successfuly.");
       }
     );
+  });
+};
+
+export const apiGet = async (query: string) => {
+  return await new Promise((resolve, reject) => {
+    db.all(query, (err: Error, row) => {
+      if (err) {
+        console.log(err);
+        return reject(err);
+      }
+      return resolve(row);
+    });
   });
 };
