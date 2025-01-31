@@ -2,12 +2,21 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-const BrandItem = ({ brand }) => {
-  console.log(brand.img_url);
+type Brand = {
+  brand: string;
+  img_url: string;
+};
+
+type Data = {
+  data: Brand;
+};
+
+const BrandItem: React.FC<Data> = ({ data }) => {
+  console.log(data.img_url);
   return (
-    <Link href={brand.brand}>
+    <Link href={data.brand}>
       <div className="text-center p-4 items-center">
-        <Image src={brand.img_url} alt={brand.brand} width={100} height={100} />
+        <Image src={data.img_url} alt={data.brand} width={100} height={100} />
       </div>
     </Link>
   );

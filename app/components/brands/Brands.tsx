@@ -12,7 +12,7 @@ const Brands = async () => {
   const data = await JSON.parse(brand);
 
   const content = data?.map((el: Brand, index: number) => {
-    return <BrandItem brand={el} key={index} />;
+    return <BrandItem data={el} key={index} />;
   });
 
   return (
