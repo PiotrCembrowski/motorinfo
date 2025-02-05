@@ -16,7 +16,7 @@ const BrandItem: React.FC<Data> = ({ data }) => {
   return (
     <Link href={data.brand}>
       <div className="text-center p-4 items-center">
-        <Image src={data.img_url} alt={data.brand} />
+        <Image src={data.img_url} alt={data.brand} width={150} height={100} />
       </div>
     </Link>
   );
