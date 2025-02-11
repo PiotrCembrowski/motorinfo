@@ -1,4 +1,4 @@
-import { db } from "./database";
+import { db } from "./database.ts";
 
 export const migrate = () => {
   db.serialize(() => {
