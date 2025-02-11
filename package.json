@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate": "ts-node app/api/migrations.ts"
+    "migrate": "ts-node-esm app/api/migrations.ts"
   },
   "dependencies": {
     "next": "15.1.3",
