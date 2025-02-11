@@ -77,8 +77,6 @@ const page = async () => {
     }
   });
 
-  console.log(car!);
-
   const benzynowe = car!.silniki.benzynowe;
   const electric = car!.silniki.elektryczne;
   const diesle = car!.silniki.diesel;
