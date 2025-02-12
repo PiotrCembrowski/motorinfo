@@ -1,14 +1,16 @@
-import { apiPost } from "../database";
+import { apiPost } from "../database.ts";
 
 export async function POST(req: Request, res: Response) {
   const body = await req.json();
-  const { name, image_url } = body;
+  const { name, imageUrl } = body;
+
+  console.log(name, imageUrl);
 
   const query = `
-        INSERT INTO brands(name, image_url)
+        INSERT INTO brands(name, imageUrl)
         VALUES(?,?)
     `;
-  const values = [name, image_url];
+  const values = [name, imageUrl];
 
   let status, respBody;
   await apiPost(query, values)
