@@ -4,8 +4,6 @@ export async function POST(req: Request, res: Response) {
   const body = await req.json();
   const { name, imageUrl } = body;
 
-  console.log(name, imageUrl);
-
   const query = `
         INSERT INTO brands(name, imageUrl)
         VALUES(?,?)
