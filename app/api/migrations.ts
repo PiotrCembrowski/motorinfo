@@ -52,3 +52,5 @@ export const migrate = () => {
     }
   );
 };
+
+migrate();
