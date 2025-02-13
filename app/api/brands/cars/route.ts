@@ -25,7 +25,7 @@ export async function POST(req: Request, res: Response) {
   } = body;
 
   const query = `
-  INSERT INTO brands(    
+  INSERT INTO cars(    
     company,
     model,
     segment,
