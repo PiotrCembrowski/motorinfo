@@ -23,6 +23,7 @@ export const migrate = () => {
     `
     CREATE TABLE IF NOT EXISTS cars (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        company TEXT NOT NULL,
         model TEXT NOT NULL,
         segment TEXT NOT NULL,
         door_options TEXT NOT NULL,
