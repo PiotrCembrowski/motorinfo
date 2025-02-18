@@ -1,4 +1,4 @@
-export async function fetchData<T>(utl: string): Promise<T> {
+export async function fetchData<T>(url: string): Promise<T> {
   const response = await fetch(url);
 
   if (!response.ok) {
