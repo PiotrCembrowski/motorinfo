@@ -21,28 +21,37 @@ export const migrate = () => {
 
   db.run(
     `
-    CREATE TABLE IF NOT EXISTS cars (
+    CREATE TABLE cars (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         company TEXT NOT NULL,
         model TEXT NOT NULL,
+        imageUrl TEXT,
         segment TEXT NOT NULL,
         door_options TEXT NOT NULL,
-        silniki_benzyna TEXT,
-        silniki_diesel TEXT,
-        silniki_hybrid TEXT,
-        silniki_electric TEXT,
+        
+        benzyna_engine TEXT,
         benzyna_moc TEXT,
+        benzyna_moment_obrotowy TEXT,
+        benzyna_v_max TEXT,
+
+        diesel_engine TEXT,
         diesel_moc TEXT,
+        diesel_moment_obrotowy TEXT,
+        diesel_v_max TEXT,
+
+        hybrid_engine TEXT,
         hybrid_moc TEXT,
+        hybrid_moment_obrotowy TEXT,
+        hybrid_v_max TEXT,
+
+        electric_engine TEXT,
         electric_moc TEXT,
-        benzyna_moment_obrotowy TEXT NOT NULL,
-        diesel_moment_obrotowy TEXT NOT NULL,
-        hybrid_moment_obrotowy TEXT NOT NULL,
-        electric_moment_obrotowy TEXT NOT NULL,
+        electric_moment_obrotowy TEXT,
+        electric_v_max TEXT,
+
         charakterystyka TEXT NOT NULL,
         mileage TEXT NOT NULL,
         acceleration TEXT NOT NULL,
-        v_max TEXT NOT NULL,
         gears INTEGER NOT NULL,
         transmission_type TEXT NOT NULL,
         height TEXT NOT NULL,
