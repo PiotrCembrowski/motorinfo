@@ -1,17 +1,25 @@
 import React from "react";
-import BrandItem from "./BrandItem";
-import { promises as fs } from "fs";
+import { fetchData } from "@/app/utils/fetch.ts";
+import BrandItem from "./BrandItem.tsx";
 
-type Brand = {
-  brand: string;
-  img_url: string;
-};
+interface Brand {
+  name: string;
+  imageUrl: string;
+}
 
 const Brands = async () => {
-  const brand = await fs.readFile(process.cwd() + "/data/brands.json", "utf-8");
-  const data = await JSON.parse(brand);
+  let brandsList: Brand[] = [];
 
-  const content = data?.map((el: Brand, index: number) => {
+  await fetchData<Brand[]>("http://localhost:3000/api/brands")
+    .then((brands) => {
+      console.log("Fetched brands:", brands);
+      brandsList = brands;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+  const content = brandsList?.map((el: Brand, index: number) => {
     return <BrandItem data={el} key={index} />;
   });
 

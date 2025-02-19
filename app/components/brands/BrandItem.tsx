@@ -3,8 +3,8 @@ import React from "react";
 import Image from "next/image";
 
 type Brand = {
-  brand: string;
-  img_url: string;
+  name: string;
+  imageUrl: string;
 };
 
 type Data = {
@@ -12,11 +12,11 @@ type Data = {
 };
 
 const BrandItem: React.FC<Data> = ({ data }) => {
-  console.log(data.img_url);
+  console.log(data.imageUrl);
   return (
-    <Link href={data.brand}>
+    <Link href={data.name}>
       <div className="text-center p-4 items-center">
-        <Image src={data.img_url} alt={data.brand} width={150} height={100} />
+        <Image src={data.imageUrl} alt={data.name} width={150} height={100} />
       </div>
     </Link>
   );
