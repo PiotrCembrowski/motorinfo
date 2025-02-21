@@ -42,9 +42,9 @@ const page = async () => {
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
-  let data = [];
+  let data: Car[] = [];
 
-  fetchData<Brand[]>(`http://localhost:3000/api/brands`)
+  fetchData<Car[]>(`http://localhost:3000/api/brands`)
     .then((brands) => {
       console.log("Fetched brands:", brands);
       data = JSON.parse(car);
