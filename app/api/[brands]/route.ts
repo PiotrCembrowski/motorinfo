@@ -8,8 +8,8 @@ export async function GET(req: Request, res: Response) {
   const name = url?.replace(/%20/g, " ");
   console.log(name);
   const query = `SELECT *
-                  FROM brands
-                  WHERE brand = '${name}';`;
+                  FROM cars
+                  WHERE company = '${name}';`;
 
   let status, body;
   try {
