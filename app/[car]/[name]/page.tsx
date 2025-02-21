@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { promises as fs } from "fs";
 import img from "@/public/images/honda.jpg";
+import { fetchData } from "@/app/utils/fetch.ts";
 
 type Specification = {
   acceleration: string;
@@ -67,6 +68,15 @@ const page = async () => {
     process.cwd() + `/data/${brandName}.json`,
     "utf-8"
   );
+
+  fetchData<Brand[]>(`http://localhost:3000/api/${brandName}`)
+    .then((brands) => {
+      console.log("Fetched brands:", brands);
+      brandsList = brands;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 
   let car: Car;
 

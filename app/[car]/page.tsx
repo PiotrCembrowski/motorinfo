@@ -1,57 +1,40 @@
 import React from "react";
 import { headers } from "next/headers";
-import { promises as fs } from "fs";
 import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/images/honda.jpg";
+import { fetchData } from "../utils/fetch.ts";
 
-type Specification = {
-  acceleration: string;
+type Car = {
+  company: string;
+  model: string;
+  imageUrl: string;
+  segment: string;
+  door_options: string[];
+  benzyna_engine: string[];
+  benzyna_moc: string;
+  benzyna_moment_obrotowy: string;
+  benzyna_v_max: string;
+  diesel_engine: string;
+  diesel_moc: string;
+  diesel_moment_obrotowy: string;
+  diesel_v_max: string;
+  hybrid_engine: string;
+  hybrid_moc: string;
+  hybrid_moment_obrotowy: string;
+  hybrid_v_max: string;
+  electric_engine: string;
+  electric_moc: string;
+  electric_moment_obrotowy: string;
+  electric_v_max: string;
+  charakterystyka: string;
   mileage: string;
-  v_max: string;
+  acceleration: string;
+  gears: number;
   transmission_type: string;
   height: string;
   weight: string;
   length: string;
-};
-
-type Benzynowe = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-type Electric = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-type Diesel = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-type Hybrid = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-
-type Silniki = {
-  benzynowe: Benzynowe;
-  elektryczne: Electric;
-  diesel: Diesel;
-  hybrydowe: Hybrid;
-  specyfikacja: Specification;
-};
-
-type Car = {
-  model: string;
-  image_url: string;
-  charakterystyka: string;
-  door_options: string[];
-  segment: string;
-  silniki: Silniki;
-  specyfikacja: Specification;
 };
 
 const page = async () => {
@@ -59,9 +42,16 @@ const page = async () => {
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
+  let data = [];
 
-  const car = await fs.readFile(process.cwd() + `/data/${name}.json`, "utf-8");
-  const data = JSON.parse(car);
+  fetchData<Brand[]>(`http://localhost:3000/api/brands`)
+    .then((brands) => {
+      console.log("Fetched brands:", brands);
+      data = JSON.parse(car);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 
   return (
     <div>
