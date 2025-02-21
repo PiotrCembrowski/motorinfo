@@ -44,7 +44,7 @@ const page = async () => {
   const name = url?.replace(/%20/g, " ");
   let data: Car[] = [];
 
-  fetchData<Car[]>(`http://localhost:3000/api/brands`)
+  fetchData<Car[]>(`http://localhost:3000/api/${name}`)
     .then((brands) => {
       console.log("Fetched brands:", brands);
       data = JSON.parse(car);

@@ -1,4 +1,5 @@
 import { apiGet, apiPost } from "../database.ts";
+import { headers } from "next/headers";
 
 export async function POST(req: Request, res: Response) {
   const body = await req.json();
@@ -26,7 +27,14 @@ export async function POST(req: Request, res: Response) {
 }
 
 export async function GET(req: Request, res: Response) {
-  const query = `SELECT * from brands`;
+  const headerList = await headers();
+  const pathname = headerList.get("x-url");
+  const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
+  const name = url?.replace(/%20/g, " ");
+  console.log(name);
+  const query = `SELECT *
+                  FROM brands
+                  WHERE name = '${name}';`;
 
   let status, body;
   try {
