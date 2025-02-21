@@ -46,8 +46,6 @@ const page = async () => {
 
   await fetchData<Car[]>(`http://localhost:3000/api/${name}`)
     .then((brand) => {
-      // console.log("Fetched brands:", brand);
-      // data = JSON.parse(brand);
       cars = brand;
     })
     .catch((error) => {
