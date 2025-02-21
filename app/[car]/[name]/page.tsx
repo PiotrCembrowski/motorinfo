@@ -4,7 +4,6 @@ import Competition from "@/app/components/car/Competition";
 import CompanyVehicles from "@/app/components/car/CompanyVehicles";
 import Image from "next/image";
 import Link from "next/link";
-import { promises as fs } from "fs";
 import img from "@/public/images/honda.jpg";
 import { fetchData } from "@/app/utils/fetch.ts";
 
@@ -45,41 +44,31 @@ const page = async () => {
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
-  const brandName = pathname?.split("/")[1];
+  const carName = pathname?.split("/")[1];
 
-  const data = await fs.readFile(
-    process.cwd() + `/data/${brandName}.json`,
-    "utf-8"
-  );
+  let carList: Car[];
+  let car: Car;
 
-  fetchData<Brand[]>(`http://localhost:3000/api/${brandName}`)
-    .then((brands) => {
-      console.log("Fetched brands:", brands);
-      brandsList = brands;
+  await fetchData<Car[]>(`http://localhost:3000/api/${carName}`)
+    .then((car) => {
+      console.log("Fetched brands:", car);
+      carList = car;
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 
-  let car: Car;
-
-  const cars: Car[] = JSON.parse(data);
-  await cars.forEach((element: Car) => {
+  await carList.forEach((element: Car) => {
     if (element.model == name) {
       car = element;
     }
   });
 
-  const benzynowe = car!.silniki.benzynowe;
-  const electric = car!.silniki.elektryczne;
-  const diesle = car!.silniki.diesel;
-  const hybrid = car!.silniki.hybrydowe;
-
   return (
     <div className="w-[1440px] m-auto mt-11 grid grid-cols-2 gap-4">
       <div>
-        <Link href={`/${brandName}`}>
-          <h5>Back to {brandName} vehicles</h5>
+        <Link href={`/${car!.company}`}>
+          <h5>Back to {car!.company} vehicles</h5>
         </Link>
         <h1 className="capitalize">{name}</h1>
         <Image
