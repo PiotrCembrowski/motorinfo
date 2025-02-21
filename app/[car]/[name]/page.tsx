@@ -8,53 +8,36 @@ import { promises as fs } from "fs";
 import img from "@/public/images/honda.jpg";
 import { fetchData } from "@/app/utils/fetch.ts";
 
-type Specification = {
-  acceleration: string;
+type Car = {
+  company: string;
+  model: string;
+  imageUrl: string;
+  segment: string;
+  door_options: string[];
+  benzyna_engine: string[];
+  benzyna_moc: string;
+  benzyna_moment_obrotowy: string;
+  benzyna_v_max: string;
+  diesel_engine: string;
+  diesel_moc: string;
+  diesel_moment_obrotowy: string;
+  diesel_v_max: string;
+  hybrid_engine: string;
+  hybrid_moc: string;
+  hybrid_moment_obrotowy: string;
+  hybrid_v_max: string;
+  electric_engine: string;
+  electric_moc: string;
+  electric_moment_obrotowy: string;
+  electric_v_max: string;
+  charakterystyka: string;
   mileage: string;
-  v_max: string;
+  acceleration: string;
+  gears: number;
   transmission_type: string;
   height: string;
   weight: string;
   length: string;
-};
-
-type Benzynowe = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-type Electric = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-type Diesel = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-type Hybrid = {
-  typy: string[];
-  moc: string;
-  moment_obrotowy: string;
-};
-
-type Silniki = {
-  benzynowe: Benzynowe;
-  elektryczne: Electric;
-  diesel: Diesel;
-  hybrydowe: Hybrid;
-  specyfikacja: Specification;
-};
-
-type Car = {
-  model: string;
-  image_url: string;
-  charakterystyka: string;
-  door_options: string[];
-  segment: string;
-  silniki: Silniki;
-  specyfikacja: Specification;
 };
 
 const page = async () => {
