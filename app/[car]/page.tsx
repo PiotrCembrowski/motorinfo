@@ -42,12 +42,13 @@ const page = async () => {
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
-  let data: Car[] = [];
+  let cars: Car[] = [];
 
-  fetchData<Car[]>(`http://localhost:3000/api/${name}`)
-    .then((brands) => {
-      console.log("Fetched brands:", brands);
-      data = JSON.parse(car);
+  await fetchData<Car[]>(`http://localhost:3000/api/${name}`)
+    .then((brand) => {
+      // console.log("Fetched brands:", brand);
+      // data = JSON.parse(brand);
+      cars = brand;
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -57,11 +58,12 @@ const page = async () => {
     <div>
       <h1>{name}</h1>
       <div className="grid grid-cols-8">
-        {data.map((car: Car, index: number) => {
+        {cars.map((car: Car, index: number) => {
+          console.log(car);
           return (
             <Link href={`${name}/${car.model}`} key={index}>
               <Image
-                src={car.image_url ? car.image_url : img}
+                src={car.imageUrl ? car.imageUrl : img}
                 alt={car.model}
                 width={150}
                 height={100}
