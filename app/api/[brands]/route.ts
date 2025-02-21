@@ -1,30 +1,5 @@
-import { apiGet, apiPost } from "../database.ts";
+import { apiGet } from "../database.ts";
 import { headers } from "next/headers";
-
-export async function POST(req: Request, res: Response) {
-  const body = await req.json();
-  const { name, imageUrl } = body;
-
-  const query = `
-        INSERT INTO brands(name, imageUrl)
-        VALUES(?,?)
-    `;
-  const values = [name, imageUrl];
-
-  let status, respBody;
-  await apiPost(query, values)
-    .then(() => {
-      status = 200;
-      respBody = { message: "Successfuly created brand!" };
-    })
-    .catch((err) => {
-      status = 400;
-      respBody = err;
-    });
-  return Response.json(respBody, {
-    status,
-  });
-}
 
 export async function GET(req: Request, res: Response) {
   const headerList = await headers();
@@ -34,7 +9,7 @@ export async function GET(req: Request, res: Response) {
   console.log(name);
   const query = `SELECT *
                   FROM brands
-                  WHERE name = '${name}';`;
+                  WHERE brand = '${name}';`;
 
   let status, body;
   try {

@@ -10,7 +10,7 @@ interface Brand {
 const Brands = async () => {
   let brandsList: Brand[] = [];
 
-  await fetchData<Brand[]>("http://localhost:3000/api/brands")
+  await fetchData<Brand[]>("http://localhost:3000/api/AllBrands")
     .then((brands) => {
       console.log("Fetched brands:", brands);
       brandsList = brands;
