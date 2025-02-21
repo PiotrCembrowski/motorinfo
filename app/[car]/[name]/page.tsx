@@ -72,7 +72,7 @@ const page = async () => {
         </Link>
         <h1 className="capitalize">{name}</h1>
         <Image
-          src={car!.image_url ? car!.image_url : img}
+          src={car!.imageUrl ? car!.imageUrl : img}
           alt="car"
           width={500}
           height={200}
@@ -100,40 +100,32 @@ const page = async () => {
               </tr>
               <tr>
                 <td>Engine type:</td>
-                {benzynowe ? (
-                  benzynowe.typy.map((silnik, index) => {
-                    return <td key={index}>Gasoline: {silnik}, </td>;
-                  })
+                {car!.benzyna_engine ? (
+                  <td>Petrol: {car!.benzyna_engine}</td>
                 ) : (
-                  <td>Gasoline: not available</td>
+                  <td>Petrol: not available</td>
                 )}
               </tr>
               <tr>
                 <td></td>
-                {electric ? (
-                  electric?.typy.map((silnik, index) => {
-                    return <td key={index}>Electric: {silnik}, </td>;
-                  })
+                {car!.electric_engine ? (
+                  <td>Electric: {car!.electric_engine}</td>
                 ) : (
                   <td>Electric: not available</td>
                 )}
               </tr>
               <tr>
                 <td></td>
-                {diesle ? (
-                  diesle?.typy.map((silnik, index) => {
-                    return <td key={index}>Diesel: {silnik}, </td>;
-                  })
+                {car!.diesel_engine ? (
+                  <td>car!.diesel_engine</td>
                 ) : (
                   <td>Diesel: not available</td>
                 )}
               </tr>
               <tr className="">
                 <td className="w-1/3"></td>
-                {hybrid ? (
-                  hybrid?.typy.map((silnik, index) => {
-                    return <td key={index}>Hybrid: {silnik}, </td>;
-                  })
+                {car!.hybrid_engine ? (
+                  <td>Hybrid: {car!.hybrid_engine}</td>
                 ) : (
                   <td>Hybrid: not available</td>
                 )}
@@ -141,55 +133,69 @@ const page = async () => {
               <tr>
                 <td>Power</td>
                 <td>
-                  {benzynowe
-                    ? `Gasoline: ${benzynowe.moc}`
-                    : "Gasoline: not available"}
+                  {car!.benzyna_moc
+                    ? `Petrol: ${car!.benzyna_moc}`
+                    : "Petrol: not available"}
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>
-                  {electric
-                    ? `Electric: ${electric.moc}`
+                  {car!.electric_moc
+                    ? `Electric: ${car!.electric_moc}`
                     : "Electric: not available"}
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>
-                  {diesle ? `Diesel: ${diesle.moc}` : "Diesel: not available"}
+                  {car!.diesel_moc
+                    ? `Diesel: ${car!.diesel_moc}`
+                    : "Diesel: not available"}
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>
-                  {hybrid ? `Hybrid: ${hybrid.moc}` : "Hybrid: not available"}
+                  {car!.hybrid_moc
+                    ? `Hybrid: ${car!.hybrid_moc}`
+                    : "Hybrid: not available"}
                 </td>
               </tr>
               <tr>
                 <td>Torque</td>
                 <td>
-                  Gasoline:{" "}
-                  {benzynowe ? benzynowe.moment_obrotowy : "not available"}
+                  Petrol:{" "}
+                  {car!.benzyna_moment_obrotowy
+                    ? car!.benzyna_moment_obrotowy
+                    : "not available"}
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>
-                  Diesle: {diesle ? diesle.moment_obrotowy : "not available"}
+                  Diesle:{" "}
+                  {car!.diesel_moment_obrotowy
+                    ? car!.diesel_moment_obrotowy
+                    : "not available"}
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>
                   Electric:{" "}
-                  {electric ? electric.moment_obrotowy : "not available"}
+                  {car!.electric_moment_obrotowy
+                    ? car!.electric_moment_obrotowy
+                    : "not available"}
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>
-                  Hybrid: {hybrid ? hybrid.moment_obrotowy : "not available"}
+                  Hybrid:{" "}
+                  {car!.hybrid_moment_obrotowy
+                    ? car!.hybrid_moment_obrotowy
+                    : "not available"}
                 </td>
               </tr>
             </tbody>
@@ -200,28 +206,40 @@ const page = async () => {
               <tbody>
                 <tr>
                   <td className="w-1/2">Mileage</td>
-                  <td>{car!.specyfikacja.mileage}</td>
+                  <td>{car!.mileage}</td>
                 </tr>
                 <tr>
                   <td>Acceleration</td>
-                  <td>{car!.specyfikacja.acceleration}</td>
+                  <td>{car!.acceleration}</td>
                 </tr>
                 <tr>
-                  <td className="align-top">V-max</td>
-                  <td>{car!.specyfikacja.v_max}</td>
+                  <td className="align-top">Petrol V-max:</td>
+                  <td>{car!.benzyna_v_max}</td>
+                </tr>
+                <tr>
+                  <td className="align-top">Electric V-max:</td>
+                  <td>{car!.electric_v_max}</td>
+                </tr>
+                <tr>
+                  <td className="align-top">Diesel V-max:</td>
+                  <td>{car!.diesel_v_max}</td>
+                </tr>
+                <tr>
+                  <td className="align-top">Hybrid V-max:</td>
+                  <td>{car!.hybrid_v_max}</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div>
             <h4 className="mt-4">Transmission:</h4>
-            <p>{car!.specyfikacja.transmission_type}</p>
+            <p>{car!.transmission_type}</p>
           </div>
           <div>
             <h4 className="mt-4">Measurements: </h4>
-            <p>wysokość: {car!.specyfikacja.height}</p>
-            <p>długość: {car!.specyfikacja.length}</p>
-            <p>waga: {car!.specyfikacja.weight}</p>
+            <p>wysokość: {car!.height}</p>
+            <p>długość: {car!.length}</p>
+            <p>waga: {car!.weight}</p>
           </div>
         </div>
       </div>
