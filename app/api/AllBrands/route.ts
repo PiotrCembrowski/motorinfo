@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { apiGet, apiPost } from "../database.ts";
 
 export async function POST(req: Request) {

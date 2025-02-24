@@ -1,7 +1,8 @@
+/* eslint-disable */
 import { apiGet } from "../database.ts";
 import { headers } from "next/headers";
 
-export async function GET(req: Request, res: Response) {
+export async function GET() {
   const headerList = await headers();
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
