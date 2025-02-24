@@ -10,7 +10,9 @@ interface Brand {
 const Brands = async () => {
   let brandsList: Brand[] = [];
 
-  await fetchData<Brand[]>("https://motorinfo.vercel.app/api/AllBrands")
+  await fetchData<Brand[]>(
+    "https://motorinfo-piotrcembrowskis-projects.vercel.app/api/AllBrands"
+  )
     .then((brands) => {
       console.log("Fetched brands:", brands);
       brandsList = brands;
