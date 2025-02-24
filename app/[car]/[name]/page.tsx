@@ -46,7 +46,7 @@ const page = async () => {
   const name = url?.replace(/%20/g, " ");
   const carName = pathname?.split("/")[1];
 
-  let carList: Car[];
+  let carList: Car[] = [];
   let car: Car;
 
   await fetchData<Car[]>(
