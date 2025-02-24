@@ -1,6 +1,6 @@
 import { apiPost, apiGet } from "../../database.ts";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const body = await req.json();
   const {
     company,
@@ -121,7 +121,7 @@ export async function POST(req: Request, res: Response) {
   });
 }
 
-export async function GET(req: Request, res: Response) {
+export async function GET() {
   const query = `SELECT * from cars`;
 
   let status, body;
