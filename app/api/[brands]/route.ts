@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { apiGet, apiDelete } from "../database.ts";
 import { headers } from "next/headers";
+import { NextResponse, NextRequest } from "next/server";
 
 export async function GET() {
   const headerList = await headers();
@@ -32,38 +33,30 @@ export async function GET() {
   }
 }
 
-export default async function handler(req, res) {
-  // Only allow DELETE requests
-  if (req.method !== "DELETE") {
-    res.setHeader("Allow", "DELETE");
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+export async function DELETE(req: NextRequest) {
+  const headerList = await headers();
+  const pathname = headerList.get("x-url");
+  const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
+  const name = url?.replace(/%20/g, " ");
+  const query = `DELETE FROM cars
+                  WHERE company = '${name}';`;
 
-  // Extract the record ID from the query parameters
-  const { id } = req.query;
-  if (!id) {
-    return res.status(400).json({ error: "Missing record ID" });
-  }
-
+  let status, body;
   try {
-    // Open a connection to your SQLite database
-    const db = await open({
-      filename: "./mydb.sqlite", // update the path if needed
-      driver: sqlite3.Database,
+    await apiDelete(query, name)
+      .then(() => {
+        status = 200;
+        body = { message: `${name} deleted successfully` };
+      })
+      .catch((err: Error) => {
+        status = 400;
+        body = { error: err };
+      });
+    return Response.json(body, {
+      status,
     });
-
-    // Execute the DELETE query
-    const result = await db.run("DELETE FROM records WHERE id = ?", id);
-
-    // Check if any row was affected (i.e. record existed)
-    if (result.changes === 0) {
-      return res.status(404).json({ error: "Record not found" });
-    }
-
-    // Respond with a success message
-    return res.status(200).json({ message: "Record deleted successfully" });
-  } catch (error) {
-    console.error("Error deleting record:", error);
-    return res.status(500).json({ error: "Error deleting record" });
+  } catch (error: any) {
+    console.error(error.message);
+    return Response.json({ error: error }, { status: 400 });
   }
 }

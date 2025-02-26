@@ -37,7 +37,7 @@ export const apiPost = async (query: string, values: string[]) => {
   });
 };
 
-export const apiDelete = async (query: string, name: string) => {
+export const apiDelete = async (query: string, name: string | undefined) => {
   return await new Promise((resolve, reject) => {
     db.run(query, name, function (err) {
       if (err) {
