@@ -37,8 +37,8 @@ export async function DELETE() {
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
-  const query = `DELETE FROM cars
-                  WHERE company = '${name}';`;
+  const query = `DELETE FROM brands
+                  WHERE name = ?;`;
 
   let status, body;
   try {
