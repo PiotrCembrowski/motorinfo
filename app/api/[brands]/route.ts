@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { apiGet, apiDelete } from "../database.ts";
 import { headers } from "next/headers";
-import { NextResponse, NextRequest } from "next/server";
 
 export async function GET() {
   const headerList = await headers();
@@ -33,7 +32,7 @@ export async function GET() {
   }
 }
 
-export async function DELETE(req: NextRequest) {
+export async function DELETE() {
   const headerList = await headers();
   const pathname = headerList.get("x-url");
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
