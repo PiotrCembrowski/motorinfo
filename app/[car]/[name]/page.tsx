@@ -80,12 +80,12 @@ const page = async () => {
           height={200}
         />
         <div className="grid grid-cols-1 gap-4 mt-4">
-          <div className="bg-white py-4 px-8 shadow-sm">
+          {/* <div className="bg-white py-4 px-8 shadow-sm">
             <Competition />
           </div>
           <div className="bg-white py-4 px-8 shadow-sm">
             <CompanyVehicles />
-          </div>
+          </div> */}
         </div>
       </div>
       <div>
