@@ -1,7 +1,7 @@
 import React from "react";
 import { headers } from "next/headers";
-import Competition from "@/app/components/car/Competition";
-import CompanyVehicles from "@/app/components/car/CompanyVehicles";
+// import Competition from "@/app/components/car/Competition";
+// import CompanyVehicles from "@/app/components/car/CompanyVehicles";
 import Image from "next/image";
 import Link from "next/link";
 import img from "@/public/images/honda.jpg";
