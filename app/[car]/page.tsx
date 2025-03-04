@@ -44,9 +44,7 @@ const page = async () => {
   const name = url?.replace(/%20/g, " ");
   let cars: Car[] = [];
 
-  await fetchData<Car[]>(
-    `https://motorinfo-piotrcembrowskis-projects.vercel.app/api/${name}`
-  )
+  await fetchData<Car[]>(`https://www.motoinfo.online/api/${name}`)
     .then((brand) => {
       cars = brand;
     })

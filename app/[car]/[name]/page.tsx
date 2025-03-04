@@ -49,9 +49,7 @@ const page = async () => {
   let carList: Car[] = [];
   let car: Car;
 
-  await fetchData<Car[]>(
-    `https://motorinfo-piotrcembrowskis-projects.vercel.app/api/${carName}`
-  )
+  await fetchData<Car[]>(`https://www.motoinfo.online/api/${carName}`)
     .then((car) => {
       console.log("Fetched brands:", car);
       carList = car;
