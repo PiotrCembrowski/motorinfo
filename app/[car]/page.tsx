@@ -59,7 +59,11 @@ const page = async () => {
         {cars.map((car: Car, index: number) => {
           console.log(car);
           return (
-            <Link href={`${name}/${car.model}`} key={index}>
+            <Link
+              href={`${name}/${car.model}`}
+              key={index}
+              className="flex flex-col justify-between mb-10"
+            >
               <Image
                 src={car.imageUrl ? car.imageUrl : img}
                 alt={car.model}
