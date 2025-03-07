@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import GoogleAdsense from "./components/GoogleAdsense";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           {children}
         </main>
       </body>
+      <GoogleAdsense pId="1938585149505269" />
       <GoogleAnalytics gaId="G-HZNKDT6VJJ" />
     </html>
   );
