@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-const NavbarMenuItem = () => {
+const NavbarMenuItem = ({ name, url }) => {
   return (
     <div>
-      <Link href="/" className="font-bold">
-        HOME
+      <Link href={url} className="font-bold">
+        {name}
       </Link>
     </div>
   );
