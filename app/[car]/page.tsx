@@ -44,7 +44,7 @@ const page = async () => {
   const name = url?.replace(/%20/g, " ");
   let cars: Car[] = [];
 
-  await fetchData<Car[]>(`https://www.motoinfo.online/api/${name}`)
+  await fetchData<Car[]>(`https://motoinfo.online/api/${name}`)
     .then((brand) => {
       cars = brand;
     })

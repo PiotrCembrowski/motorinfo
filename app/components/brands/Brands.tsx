@@ -10,7 +10,7 @@ interface Brand {
 const Brands = async () => {
   let brandsList: Brand[] = [];
 
-  await fetchData<Brand[]>("https://www.motoinfo.online/api/AllBrands")
+  await fetchData<Brand[]>("https://motoinfo.online/api/AllBrands")
     .then((brands) => {
       console.log("Fetched brands:", brands);
       brandsList = brands;
