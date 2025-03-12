@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const NavbarMenuItem = ({ name, url }) => {
+const NavbarMenuItem = ({ name, url }: { name: string; url: string }) => {
   return (
     <div>
       <Link href={url} className="font-bold">
