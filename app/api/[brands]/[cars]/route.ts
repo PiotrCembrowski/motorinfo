@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { apiPost, apiGet } from "../../database.ts";
+import { apiPost, apiGet, apiDelete } from "../../database.ts";
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -121,6 +121,7 @@ export async function POST(req: Request) {
     status,
   });
 }
+
 export async function GET() {
   const query = `SELECT * from cars`;
 
