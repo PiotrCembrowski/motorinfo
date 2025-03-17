@@ -3,7 +3,7 @@ import NavbarMenuItem from "./NavbarMenuItem";
 
 const NavbarMenu = () => {
   return (
-    <div className="flex space-x-8">
+    <div className="flex space-x-8 w-10/12 m-auto">
       <div>
         <NavbarMenuItem name="HOME" url="/" />
       </div>
