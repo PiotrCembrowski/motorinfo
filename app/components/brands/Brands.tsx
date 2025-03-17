@@ -24,9 +24,11 @@ const Brands = async () => {
   });
 
   return (
-    <div className="w-[1200px] mx-auto my-12">
+    <div className="w-full mx-auto my-12">
       <h1>Brands</h1>
-      <div className="grid grid-cols-10 items-center">{content}</div>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,125px))] items-center w-full">
+        {content}
+      </div>
     </div>
   );
 };
