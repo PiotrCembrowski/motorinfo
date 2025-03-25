@@ -26,6 +26,11 @@ const Brands = async () => {
   return (
     <div className="w-full mx-auto my-12">
       <h1>Brands</h1>
+      <h4>
+        Find a vehicle by brand and learn more about the model that interests
+        you.
+      </h4>
+      <hr className="mt-5 border-gray-300" />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,125px))] items-center w-full">
         {content}
       </div>
