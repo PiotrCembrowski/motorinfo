@@ -19,7 +19,9 @@ const HeroRightColCars = async () => {
       console.error("Error:", error);
     });
 
-  const content = carsList?.map((el: Car, index: number) => {
+  const topElements = carsList.slice(0, 3);
+
+  const content = topElements?.map((el: Car, index: number) => {
     return <HeroRightColCarItem data={el} key={index} />;
   });
 
