@@ -1,4 +1,5 @@
 import React from "react";
+import HeroRightColCars from "./HeroRightColCars";
 
 const Hero = () => {
   return (
@@ -6,7 +7,7 @@ const Hero = () => {
       <div>
         <h1>Hero</h1>
       </div>
-      <div>cars</div>
+      <HeroRightColCars />
     </div>
   );
 };
