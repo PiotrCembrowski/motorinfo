@@ -10,14 +10,18 @@ interface Car {
 const HeroRightColCars = async () => {
   let carsList: Car[] = [];
 
-  await fetchData<Car[]>("https://motoinfo.online/api/AllBrands")
-    .then((brands) => {
-      console.log("Fetched brands:", brands);
-      carsList = brands;
+  await fetchData<Car[]>("https://motoinfo.online/api/brands/cars")
+    .then((cars) => {
+      console.log("Fetched brands:", cars);
+      carsList = cars;
     })
     .catch((error) => {
       console.error("Error:", error);
     });
+
+  const content = carsList?.map((el: Car, index: number) => {
+    return <HeroRightColCarItem data={el} key={index} />;
+  });
 
   return (
     <div>
