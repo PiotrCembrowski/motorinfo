@@ -23,11 +23,7 @@ const HeroRightColCars = async () => {
     return <HeroRightColCarItem data={el} key={index} />;
   });
 
-  return (
-    <div>
-      <HeroRightColCarItem />
-    </div>
-  );
+  return <div>{content}</div>;
 };
 
 export default HeroRightColCars;

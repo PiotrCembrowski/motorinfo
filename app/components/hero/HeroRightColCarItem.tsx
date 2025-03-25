@@ -9,7 +9,7 @@ type Data = {
   data: Car;
 };
 
-const HeroRightColCarItem: React.FC<Data> = () => {
+const HeroRightColCarItem: React.FC<Data> = ({ data }) => {
   return <div>HeroRightColCarItem</div>;
 };
 
