@@ -3,12 +3,13 @@ import { fetchData } from "@/app/utils/fetch.ts";
 import HeroRightColCarItem from "./HeroRightColCarItem";
 
 interface Car {
-  name: string;
+  model: string;
   imageUrl: string;
 }
 
 const HeroRightColCars = async () => {
   let carsList: Car[] = [];
+  let newList: Car[] = [];
 
   await fetchData<Car[]>("https://motoinfo.online/api/brands/cars")
     .then((cars) => {
@@ -19,13 +20,18 @@ const HeroRightColCars = async () => {
       console.error("Error:", error);
     });
 
-  const topElements = carsList.slice(0, 3);
+  let i: number = 0;
+  do {
+    i += 1;
+    const randomIndex = Math.floor(Math.random() * (carsList.length - 0) + 0);
+    newList.push(carsList[randomIndex]);
+  } while (i < 3);
 
-  const content = topElements?.map((el: Car, index: number) => {
+  const content = newList?.map((el: Car, index: number) => {
     return <HeroRightColCarItem data={el} key={index} />;
   });
 
-  return <div>{content}</div>;
+  return <div className="grid gap-5">{content}</div>;
 };
 
 export default HeroRightColCars;
