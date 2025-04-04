@@ -12,7 +12,6 @@ const Brands = async () => {
 
   await fetchData<Brand[]>("https://motoinfo.online/api/AllBrands")
     .then((brands) => {
-      console.log("Fetched brands:", brands);
       brandsList = brands;
     })
     .catch((error) => {

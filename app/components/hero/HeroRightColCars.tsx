@@ -9,11 +9,10 @@ interface Car {
 
 const HeroRightColCars = async () => {
   let carsList: Car[] = [];
-  let newList: Car[] = [];
+  const newList: Car[] = [];
 
   await fetchData<Car[]>("https://motoinfo.online/api/brands/cars")
     .then((cars) => {
-      console.log("Fetched brands:", cars);
       carsList = cars;
     })
     .catch((error) => {
