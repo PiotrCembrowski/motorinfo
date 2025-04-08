@@ -4,8 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/images/honda.jpg";
 import { fetchData } from "../utils/fetch.ts";
+import Segment from "../components/car/Segment.tsx";
 
-type Car = {
+export type Car = {
   company: string;
   model: string;
   imageUrl: string;
@@ -43,6 +44,7 @@ const page = async () => {
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
   let cars: Car[] = [];
+  let suvCars: Car[] = [];
 
   await fetchData<Car[]>(`https://motoinfo.online/api/${name}`)
     .then((brand) => {
@@ -52,12 +54,18 @@ const page = async () => {
       console.error("Error:", error);
     });
 
+  await cars.forEach((car) => {
+    if (car.segment === "SUV") {
+      suvCars.push(car);
+    }
+  });
+
   return (
     <div>
       <h1>{name}</h1>
+      <Segment name="SUV" array={suvCars} />
       <div className="grid grid-cols-8">
         {cars.map((car: Car, index: number) => {
-          console.log(car);
           return (
             <Link
               href={`${name}/${car.model}`}
