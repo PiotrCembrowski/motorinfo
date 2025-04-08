@@ -12,7 +12,7 @@ type Data = {
 
 const HeroRightColCarItem: React.FC<Data> = ({ data }) => {
   return (
-    <div className="col-span-1">
+    <div className="col-span-1 flex flex-col items-center justify-center p-3">
       <h5>{data.model}</h5>
       <Image src={data.imageUrl} alt={data.model} width={150} height={100} />
     </div>
