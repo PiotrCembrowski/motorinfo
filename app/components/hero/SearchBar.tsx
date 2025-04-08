@@ -12,6 +12,7 @@ interface Option {
 
 const SearchBar = () => {
   const [data, setData] = useState([]);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     fetch("/api/cars")
@@ -28,12 +29,32 @@ const SearchBar = () => {
       });
   }, []);
 
+  const changeHandler = (selectedOption: any) => {
+    setInputValue(selectedOption.value);
+    console.log("Selected option:", selectedOption);
+  };
+
+  const onClickHandler = () => {
+    if (inputValue) {
+      window.location.href = `/cars/${inputValue}`;
+    } else {
+      alert("Please select a vehicle model.");
+    }
+  };
+
   return (
     <div className="col-span-3">
       <h2 className="text-center my-10">Find your vehicle.</h2>
       <div className="flex flex-row justify-center items-center">
-        <CreatableSelect options={data} className="w-9/12" />
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">
+        <CreatableSelect
+          options={data}
+          className="w-9/12"
+          onChange={(e) => changeHandler(e)}
+        />
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+          onClick={onClickHandler}
+        >
           Search
         </button>
       </div>
