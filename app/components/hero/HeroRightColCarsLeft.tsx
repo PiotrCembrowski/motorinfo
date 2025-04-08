@@ -7,7 +7,7 @@ interface Car {
   imageUrl: string;
 }
 
-const HeroRightColCars = async () => {
+const HeroRightColCarsLeft = async () => {
   let carsList: Car[] = [];
   const newList: Car[] = [];
 
@@ -30,7 +30,7 @@ const HeroRightColCars = async () => {
     return <HeroRightColCarItem data={el} key={index} />;
   });
 
-  return <div className="grid gap-5">{content}</div>;
+  return <div className="grid gap-5 m-2 pr-2 border-r-2">{content}</div>;
 };
 
-export default HeroRightColCars;
+export default HeroRightColCarsLeft;

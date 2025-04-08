@@ -43,9 +43,9 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="col-span-3">
-      <h2 className="text-center my-10">Find your vehicle.</h2>
-      <div className="flex flex-row justify-center items-center">
+    <div className="col-span-3 flex flex-col justify-center">
+      <h2 className="self-center basis-[20%]">Find your vehicle.</h2>
+      <div className="flex flex-row justify-center items-start basis-[50%]">
         <CreatableSelect
           options={data}
           className="w-9/12"
