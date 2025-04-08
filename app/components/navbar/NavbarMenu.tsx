@@ -8,6 +8,9 @@ const NavbarMenu = () => {
         <NavbarMenuItem name="HOME" url="/" />
       </div>
       <div>
+        <NavbarMenuItem name="CARS" url="/cars" />
+      </div>
+      <div>
         <NavbarMenuItem name="PRIVACY" url="/privacy" />
       </div>
     </div>
