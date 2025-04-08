@@ -24,8 +24,8 @@ const Brands = async () => {
 
   return (
     <div className="w-full mx-auto my-12">
-      <h1>Brands</h1>
-      <h4>
+      <h1 className="text-center">Brands</h1>
+      <h4 className="text-center">
         Find a vehicle by brand and learn more about the model that interests
         you.
       </h4>
