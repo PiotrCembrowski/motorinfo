@@ -89,7 +89,7 @@ const page = async () => {
     if (car.segment === "Minivan") {
       minivanCars.push(car);
     }
-    if (car.segment === "SUV/electric") {
+    if (car.segment === "Electric SUV") {
       electricCars.push(car);
     }
     if (car.segment === "Convertible GT") {
