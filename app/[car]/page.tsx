@@ -44,7 +44,17 @@ const page = async () => {
   const url = pathname?.substring(pathname.lastIndexOf("/") + 1);
   const name = url?.replace(/%20/g, " ");
   let cars: Car[] = [];
+  let cCars: Car[] = [];
+  let coupeCars: Car[] = [];
   let suvCars: Car[] = [];
+  let sedanCars: Car[] = [];
+  let HatchbackCars: Car[] = [];
+  let SportsCars: Car[] = [];
+  let superCars: Car[] = [];
+  let GrandTourerCars: Car[] = [];
+  let minivanCars: Car[] = [];
+  let electricCars: Car[] = [];
+  let convertibleCars: Car[] = [];
 
   await fetchData<Car[]>(`https://motoinfo.online/api/${name}`)
     .then((brand) => {
@@ -58,31 +68,52 @@ const page = async () => {
     if (car.segment === "SUV") {
       suvCars.push(car);
     }
+    if (car.segment === "Sedan") {
+      sedanCars.push(car);
+    }
+    if (car.segment === "Hatchback") {
+      HatchbackCars.push(car);
+    }
+    if (car.segment === "Sports") {
+      SportsCars.push(car);
+    }
+    if (car.segment === "Grand Tourer") {
+      GrandTourerCars.push(car);
+    }
+    if (car.segment === "C") {
+      cCars.push(car);
+    }
+    if (car.segment === "Coupe") {
+      coupeCars.push(car);
+    }
+    if (car.segment === "Minivan") {
+      minivanCars.push(car);
+    }
+    if (car.segment === "SUV/electric") {
+      electricCars.push(car);
+    }
+    if (car.segment === "Convertible GT") {
+      convertibleCars.push(car);
+    }
+    if (car.segment === "Supercar") {
+      superCars.push(car);
+    }
   });
 
   return (
     <div>
       <h1>{name}</h1>
       <Segment name="SUV" array={suvCars} />
-      <div className="grid grid-cols-8">
-        {cars.map((car: Car, index: number) => {
-          return (
-            <Link
-              href={`${name}/${car.model}`}
-              key={index}
-              className="flex flex-col justify-between mb-10"
-            >
-              <Image
-                src={car.imageUrl ? car.imageUrl : img}
-                alt={car.model}
-                width={150}
-                height={100}
-              />
-              <h5 className="mt-2">{car.model}</h5>
-            </Link>
-          );
-        })}
-      </div>
+      <Segment name="Sedan" array={sedanCars} />
+      <Segment name="Hatchback" array={HatchbackCars} />
+      <Segment name="C" array={cCars} />
+      <Segment name="Electric" array={electricCars} />
+      <Segment name="Coupe" array={coupeCars} />
+      <Segment name="Convertible" array={convertibleCars} />
+      <Segment name="Sports" array={SportsCars} />
+      <Segment name="Super sport" array={superCars} />
+      <Segment name="Grand Tourer" array={GrandTourerCars} />
+      <Segment name="Minivan" array={minivanCars} />
     </div>
   );
 };
