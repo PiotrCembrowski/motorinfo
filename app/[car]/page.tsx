@@ -101,8 +101,7 @@ const page = async () => {
   });
 
   return (
-    <div>
-      <h1>{name}</h1>
+    <div className="mt-20">
       <Segment name="SUV" array={suvCars} />
       <Segment name="Sedan" array={sedanCars} />
       <Segment name="Hatchback" array={HatchbackCars} />
