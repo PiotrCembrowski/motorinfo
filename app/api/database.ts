@@ -48,3 +48,19 @@ export const apiDelete = async (query: string, name: string | undefined) => {
     });
   });
 };
+
+export const apiPatch = async (
+  query: string,
+  values: string[],
+  name: string | undefined
+) => {
+  return await new Promise((resolve, reject) => {
+    db.run(query, [...values, name], function (err) {
+      if (err) {
+        console.log(err);
+        reject(err);
+      }
+      resolve(null);
+    });
+  });
+};
